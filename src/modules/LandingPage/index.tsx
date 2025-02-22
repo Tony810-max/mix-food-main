@@ -1,19 +1,14 @@
 'use client';
 
-import { ROUTES } from '@/lib/routes';
-import { Button } from '@heroui/react';
-import { useRouter } from 'next-nprogress-bar';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 const LandingPage = () => {
-  const router = useRouter();
+  const t = useTranslations('HomePage');
 
   return (
-    <div>
-      LandingPage
-      <Button variant='solid' color='primary' onPress={() => router.push(ROUTES.BOOKING_PAGE)}>
-        chuyen trang
-      </Button>
+    <div className='flex justify-center'>
+      <div className='container'>{t('title')}</div>
     </div>
   );
 };

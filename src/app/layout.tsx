@@ -1,7 +1,10 @@
-import { fontMono, fontSans } from '@/config/fonts';
+import { montserrat } from '@/assets/fonts';
+import Header from '@/components/layouts/Header';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import type { Metadata, Viewport } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 import './globals.css';
 import Providers from './providers';
 
@@ -53,14 +56,19 @@ export const viewport: Viewport = {
 
 type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang='en'>
-      <body
-        suppressHydrationWarning
-        className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable, fontMono.variable)}
-      >
-        <Providers>{children}</Providers>
+    <html lang={locale}>
+      <body suppressHydrationWarning className={cn('min-h-screen bg-background antialiased', montserrat.className)}>
+        <NextIntlClientProvider messages={messages}>
+          <Providers>
+            <Header />
+            {children}
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
