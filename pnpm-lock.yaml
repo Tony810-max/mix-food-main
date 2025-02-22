@@ -11,6 +11,9 @@ importers:
       '@heroui/react':
         specifier: ^2.7.2
         version: 2.7.2(@types/react@18.3.12)(framer-motion@12.4.7(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028))(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)(tailwindcss@3.4.14)
+      '@heroui/select':
+        specifier: ^2.4.13
+        version: 2.4.13(@heroui/system@2.4.10(@heroui/theme@2.4.9(tailwindcss@3.4.14))(framer-motion@12.4.7(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028))(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028))(@heroui/theme@2.4.9(tailwindcss@3.4.14))(framer-motion@12.4.7(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028))(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)
       '@heroui/system':
         specifier: ^2.4.10
         version: 2.4.10(@heroui/theme@2.4.9(tailwindcss@3.4.14))(framer-motion@12.4.7(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028))(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)
@@ -20,6 +23,9 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.59.16
         version: 5.59.16(react@19.0.0-rc-02c0e824-20241028)
+      auto-zustand-selectors-hook:
+        specifier: ^3.0.1
+        version: 3.0.1(zustand@5.0.3(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028)(use-sync-external-store@1.4.0(react@19.0.0-rc-02c0e824-20241028)))
       axios:
         specifier: ^1.7.7
         version: 1.7.7
@@ -32,9 +38,15 @@ importers:
       next:
         specifier: ^15.0.2
         version: 15.0.2(@babel/core@7.26.0)(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)
+      next-intl:
+        specifier: ^3.26.5
+        version: 3.26.5(next@15.0.2(@babel/core@7.26.0)(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)
       next-nprogress-bar:
         specifier: ^2.4.7
         version: 2.4.7
+      nookies:
+        specifier: ^2.5.2
+        version: 2.5.2
       react:
         specifier: 19.0.0-rc-02c0e824-20241028
         version: 19.0.0-rc-02c0e824-20241028
@@ -44,6 +56,9 @@ importers:
       tailwind-merge:
         specifier: ^2.5.4
         version: 2.5.4
+      zustand:
+        specifier: ^5.0.3
+        version: 5.0.3(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028)(use-sync-external-store@1.4.0(react@19.0.0-rc-02c0e824-20241028))
     devDependencies:
       '@biomejs/biome':
         specifier: ^1.9.4
@@ -787,6 +802,9 @@ packages:
 
   '@formatjs/icu-skeleton-parser@1.8.13':
     resolution: {integrity: sha512-N/LIdTvVc1TpJmMt2jVg0Fr1F7Q1qJPdZSCs19unMskCmVQ/sa0H9L8PWt13vq+gLdLg1+pPsvBLydL1Apahjg==}
+
+  '@formatjs/intl-localematcher@0.5.10':
+    resolution: {integrity: sha512-af3qATX+m4Rnd9+wHcjJ4w2ijq+rAVP3CCinJQvFv1kgSu1W6jypUmvleJxcewdxmutM8dmIRZFxO/IQBZmP2Q==}
 
   '@formatjs/intl-localematcher@0.6.0':
     resolution: {integrity: sha512-4rB4g+3hESy1bHSBG3tDFaMY2CH67iT7yne1e+0CLTsGLDcmoEWWpJjjpWVaYgYfYuohIRuo0E+N536gd2ZHZA==}
@@ -2171,6 +2189,12 @@ packages:
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
+  auto-zustand-selectors-hook@3.0.1:
+    resolution: {integrity: sha512-BJHzxqdVPd0GKjieej0eALqUjXlb8SnDskeKXR85f0rEzErsXB3ttVOOZWy3IpMDle/F5F6ESAHm4tGsYP2hRw==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      zustand: '>=5.0.0'
+
   axios@1.7.7:
     resolution: {integrity: sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==}
 
@@ -2318,6 +2342,10 @@ packages:
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
+
+  cookie@0.4.2:
+    resolution: {integrity: sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA==}
+    engines: {node: '>= 0.6'}
 
   core-js-compat@3.39.0:
     resolution: {integrity: sha512-VgEUx3VwlExr5no0tXlBt+silBvhTryPwCXRI2Id1PN8WTKu7MreethvddqOubrYxkFdv/RnYrqlv1sFNAUelw==}
@@ -2852,6 +2880,16 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  negotiator@1.0.0:
+    resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
+    engines: {node: '>= 0.6'}
+
+  next-intl@3.26.5:
+    resolution: {integrity: sha512-EQlCIfY0jOhRldiFxwSXG+ImwkQtDEfQeSOEQp6ieAGSLWGlgjdb/Ck/O7wMfC430ZHGeUKVKax8KGusTPKCgg==}
+    peerDependencies:
+      next: ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
+
   next-nprogress-bar@2.4.7:
     resolution: {integrity: sha512-OeveNQYFBhQhZ+RgrDnvHNUEQfHCmipymmD4AfAVE9pFV4jeWi7/nNK5f0lIk7ODRrtjyyr/n2YpkRbs5kUoMg==}
 
@@ -2881,6 +2919,9 @@ packages:
 
   node-releases@2.0.18:
     resolution: {integrity: sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==}
+
+  nookies@2.5.2:
+    resolution: {integrity: sha512-x0TRSaosAEonNKyCrShoUaJ5rrT5KHRNZ5DwPCuizjgrnkpE5DRf3VL7AyyQin4htict92X1EQ7ejDbaHDVdYA==}
 
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
@@ -3129,6 +3170,9 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  set-cookie-parser@2.7.1:
+    resolution: {integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==}
+
   sharp@0.33.5:
     resolution: {integrity: sha512-haPVm1EkS9pgvHrQ/F3Xy+hgcuMV0Wm9vfIBSiwZ05k+xgb0PkBQpGsAA/oWdDobNaZTH5ppvHtzCFbnSEwHVw==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -3313,6 +3357,11 @@ packages:
       '@types/react':
         optional: true
 
+  use-intl@3.26.5:
+    resolution: {integrity: sha512-OdsJnC/znPvHCHLQH/duvQNXnP1w0hPfS+tkSi3mAbfjYBGh4JnyfdwkQBfIVf7t8gs9eSX/CntxUMvtKdG2MQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
+
   use-isomorphic-layout-effect@1.2.0:
     resolution: {integrity: sha512-q6ayo8DWoPZT0VdG4u3D3uxcgONP3Mevx2i2b0434cwWBoL+aelL1DzkXI6w3PhTZzUeR2kaVlZn70iCiseP6w==}
     peerDependencies:
@@ -3384,6 +3433,24 @@ packages:
   yocto-queue@1.1.1:
     resolution: {integrity: sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==}
     engines: {node: '>=12.20'}
+
+  zustand@5.0.3:
+    resolution: {integrity: sha512-14fwWQtU3pH4dE0dOpdMiWjddcH+QzKIgk1cl8epwSE7yag43k/AD/m4L6+K7DytAOr9gGBe3/EXj9g7cdostg==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
 
 snapshots:
 
@@ -4299,6 +4366,10 @@ snapshots:
   '@formatjs/icu-skeleton-parser@1.8.13':
     dependencies:
       '@formatjs/ecma402-abstract': 2.3.3
+      tslib: 2.8.0
+
+  '@formatjs/intl-localematcher@0.5.10':
+    dependencies:
       tslib: 2.8.0
 
   '@formatjs/intl-localematcher@0.6.0':
@@ -6529,6 +6600,10 @@ snapshots:
 
   asynckit@0.4.0: {}
 
+  auto-zustand-selectors-hook@3.0.1(zustand@5.0.3(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028)(use-sync-external-store@1.4.0(react@19.0.0-rc-02c0e824-20241028))):
+    dependencies:
+      zustand: 5.0.3(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028)(use-sync-external-store@1.4.0(react@19.0.0-rc-02c0e824-20241028))
+
   axios@1.7.7:
     dependencies:
       follow-redirects: 1.15.9
@@ -6682,6 +6757,8 @@ snapshots:
       split2: 4.2.0
 
   convert-source-map@2.0.0: {}
+
+  cookie@0.4.2: {}
 
   core-js-compat@3.39.0:
     dependencies:
@@ -7153,6 +7230,16 @@ snapshots:
 
   nanoid@3.3.7: {}
 
+  negotiator@1.0.0: {}
+
+  next-intl@3.26.5(next@15.0.2(@babel/core@7.26.0)(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028):
+    dependencies:
+      '@formatjs/intl-localematcher': 0.5.10
+      negotiator: 1.0.0
+      next: 15.0.2(@babel/core@7.26.0)(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)
+      react: 19.0.0-rc-02c0e824-20241028
+      use-intl: 3.26.5(react@19.0.0-rc-02c0e824-20241028)
+
   next-nprogress-bar@2.4.7:
     dependencies:
       nprogress-v2: 1.1.10
@@ -7188,6 +7275,11 @@ snapshots:
       tslib: 2.8.0
 
   node-releases@2.0.18: {}
+
+  nookies@2.5.2:
+    dependencies:
+      cookie: 0.4.2
+      set-cookie-parser: 2.7.1
 
   normalize-path@3.0.0: {}
 
@@ -7404,6 +7496,8 @@ snapshots:
 
   semver@7.6.3: {}
 
+  set-cookie-parser@2.7.1: {}
+
   sharp@0.33.5:
     dependencies:
       color: 4.2.3
@@ -7610,6 +7704,12 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.12
 
+  use-intl@3.26.5(react@19.0.0-rc-02c0e824-20241028):
+    dependencies:
+      '@formatjs/fast-memoize': 2.2.6
+      intl-messageformat: 10.7.15
+      react: 19.0.0-rc-02c0e824-20241028
+
   use-isomorphic-layout-effect@1.2.0(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028):
     dependencies:
       react: 19.0.0-rc-02c0e824-20241028
@@ -7672,3 +7772,9 @@ snapshots:
       yargs-parser: 21.1.1
 
   yocto-queue@1.1.1: {}
+
+  zustand@5.0.3(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028)(use-sync-external-store@1.4.0(react@19.0.0-rc-02c0e824-20241028)):
+    optionalDependencies:
+      '@types/react': 18.3.12
+      react: 19.0.0-rc-02c0e824-20241028
+      use-sync-external-store: 1.4.0(react@19.0.0-rc-02c0e824-20241028)

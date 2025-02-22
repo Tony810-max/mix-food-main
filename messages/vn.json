@@ -1,0 +1,11 @@
+{
+  "Language": {
+    "language": "Ngôn ngữ",
+    "selectLangue": "Lựa chọn ngôn gữ",
+    "english": "Tiếng Anh",
+    "vietnamese": "Tiếng Việt"
+  },
+  "HomePage": {
+    "title": "Xin chào thế giới!"
+  }
+}
