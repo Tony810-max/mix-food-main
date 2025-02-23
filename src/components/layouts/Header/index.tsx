@@ -18,6 +18,7 @@ const Header = () => {
         <div className='hidden items-center gap-8 lg:flex'>
           <Navbar />
           <AuthActions />
+          <SwitchLocale />
         </div>
       </div>
     </div>

@@ -15,6 +15,7 @@ const SwitchLocale = () => {
   const locales = getLocales(t);
   const { isPending, handleChangeLocale } = useCommonLocale();
   const currentLocale = getCookies(COOKIE_KEYS.LOCALE);
+  console.log('🚀 ~ SwitchLocale ~ currentLocale:', currentLocale);
   const [isDisable, setIsDisable] = React.useState<string>(currentLocale);
 
   const locale = currentLocale ? currentLocale : locales[0]?.key;
@@ -36,7 +37,7 @@ const SwitchLocale = () => {
       className='w-44'
       size='sm'
       radius='sm'
-      defaultSelectedKeys={[currentLocale]}
+      defaultSelectedKeys={[locale]}
       onChange={(e) => {
         setIsDisable(e.target.value);
         handleChangeLocale(e.target.value as Locale);
