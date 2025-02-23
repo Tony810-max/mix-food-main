@@ -11,17 +11,15 @@ import Image from 'next/image';
 import React from 'react';
 
 const SwitchLocale = () => {
-  const [isDisable, setIsDisable] = React.useState<string>('en');
-
   const t = useTranslations('Language');
   const locales = getLocales(t);
   const { isPending, handleChangeLocale } = useCommonLocale();
   const currentLocale = getCookies(COOKIE_KEYS.LOCALE);
+  const [isDisable, setIsDisable] = React.useState<string>(currentLocale);
 
   const locale = currentLocale ? currentLocale : locales[0]?.key;
 
   const renderSelect = (locale: string) => {
-    console.log('🚀 ~ renderSelect ~ locale:', locale);
     return (
       <div className='relative aspect-video w-10 rounded-[.25rem]'>
         <Image src={`/images/country/${locale}.png`} alt={locale} fill unoptimized className='object-cover' />
@@ -33,11 +31,12 @@ const SwitchLocale = () => {
     <Select
       disabledKeys={[isDisable]}
       disabled={isPending}
+      aria-current={false}
       aria-label='locale'
-      className='max-w-44'
+      className='w-44'
       size='sm'
       radius='sm'
-      defaultSelectedKeys={[locales[0]?.key]}
+      defaultSelectedKeys={[currentLocale]}
       onChange={(e) => {
         setIsDisable(e.target.value);
         handleChangeLocale(e.target.value as Locale);

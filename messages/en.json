@@ -3,7 +3,14 @@
     "english": "English",
     "vietnamese": "Vietnamese"
   },
+  "Auth": {
+    "signUp": "Sign Up",
+    "login": "Login"
+  },
   "HomePage": {
-    "title": "Hello world!"
+    "menu": "Menu",
+    "offer": "Offers",
+    "location": "Locations",
+    "delivery": "Delivery"
   }
 }

@@ -5,7 +5,14 @@
     "english": "Tiếng Anh",
     "vietnamese": "Tiếng Việt"
   },
+  "Auth": {
+    "signUp": "Đăng ký",
+    "login": "Đăng nhập"
+  },
   "HomePage": {
-    "title": "Xin chào thế giới!"
+    "menu": "Thực đơn",
+    "offer": "Khuyến mãi",
+    "location": "Địa điểm",
+    "delivery": "Vận chuyển"
   }
 }
