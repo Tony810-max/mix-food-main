@@ -15,7 +15,6 @@ const SwitchLocale = () => {
   const locales = getLocales(t);
   const { isPending, handleChangeLocale } = useCommonLocale();
   const currentLocale = getCookies(COOKIE_KEYS.LOCALE);
-  console.log('🚀 ~ SwitchLocale ~ currentLocale:', currentLocale);
   const [isDisable, setIsDisable] = React.useState<string>(currentLocale);
 
   const locale = currentLocale ? currentLocale : locales[0]?.key;
