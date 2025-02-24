@@ -11,6 +11,10 @@
     "menu": "Menu",
     "offer": "Offers",
     "location": "Locations",
-    "delivery": "Delivery"
+    "delivery": "Delivery",
+    "search": "Search",
+    "find-food": "Find Food",
+    "title-banner": "Introducing Thai Food",
+    "descr-banner": "Experience the flavors of Thailand, right here in Vietnam"
   }
 }
