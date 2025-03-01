@@ -15,6 +15,20 @@
     "search": "Search",
     "find-food": "Find Food",
     "title-banner": "Introducing Thai Food",
-    "descr-banner": "Experience the flavors of Thailand, right here in Vietnam"
+    "descr-banner": "Experience the flavors of Thailand, right here in Vietnam",
+    "nameFoodPadGai": "Pad Krapow Gai",
+    "nameTomyum": "Tom Yum Goong",
+    "namePad": "Pad Thai",
+    "nameSonTam": "Son Tam",
+    "nameMangoDesert": "Mango Sticky Rice",
+    "descFeaturePadGai": "A popular Thai street food dish featuring spicy stir-fried chicken with aromatic basil leaves, fiery chilies, and a rich, savory sauce. Often served with steamed rice and a crispy fried egg.",
+    "descFeatureTomyum": "A bold and flavorful Thai hot and sour soup with prawns, featuring the perfect balance of tangy lime, spicy chilies, and the aromatic essence of lemongrass and kaffir lime leaves.",
+    "descFeaturePadThai": "A classic Thai stir-fried noodle dish made with chewy rice noodles, eggs, tofu, and peanuts, all tossed in a sweet, tangy, and savory sauce for a perfect flavor balance.",
+    "descFeatureSomTum": "A refreshing and crunchy green papaya salad with a spicy kick from chilies, tangy lime, and the umami depth of fish sauce, delivering a bold and zesty flavor.",
+    "descFeatureMango": "Ripe, juicy mango paired with soft and sticky glutinous rice, drizzled with rich coconut milk, creating a delightful and classic Thai dessert.",
+    "descTomyum": "A famous Thai hot and sour soup, combining the spiciness of chili, the tanginess of lime, and the aroma of lemongrass and kaffir lime leaves, served with fresh prawns.",
+    "descPad": "A signature Thai stir-fried noodle dish with chewy rice noodles, eggs, tofu, peanuts, and a flavorful sauce, creating a perfect balance of sweet, sour, and savory flavors.",
+    "descCurry": "A spicy and creamy Thai green curry made with coconut milk, tender chicken, and aromatic herbs, offering a delightful mix of heat and richness.",
+    "descDessert": "A delicious Thai dessert featuring sweet ripe mango, sticky glutinous rice, and rich coconut milk, delivering a refreshing and sweet taste." 
   }
 }

@@ -17,6 +17,20 @@
     "search": "Tìm kiếm",
     "find-food": "Tìm món ăn",
     "title-banner": "Giới thiệu đồ ăn Thái Lan",
-    "descr-banner": "Trải nghiệm hương vị của Thái Lan ngay tại Việt Nam"
+    "descr-banner": "Trải nghiệm hương vị của Thái Lan ngay tại Việt Nam",
+    "nameFoodPadGai": "Bò xào lá quế",
+    "nameTomyum": "Canh Tomyum",
+    "namePad": "Pad Thai",
+    "nameSonTam": "Gỏi SonTam",
+    "nameMangoDesert": "Xôi Xoài",
+    "descFeaturePadGai": "Gà xào cay với lá húng quế, một món ăn đường phố nổi tiếng của Thái Lan, với hương thơm nồng nàn của húng quế, vị cay của ớt và nước sốt đậm đà. Thường được ăn kèm với cơm trắng và trứng chiên",
+    "descFeatureTomyum": "Canh chua cay kiểu Thái với tôm, nổi bật với vị chua của chanh, cay của ớt, hòa quyện cùng hương thơm của sả và lá chanh, tạo nên một món súp đậm đà và kích thích vị giác.",
+    "descFeaturePadThai": "Hủ tiếu xào kiểu Thái, kết hợp sợi mì gạo dai ngon với trứng, đậu hũ, đậu phộng và nước sốt đặc trưng chua ngọt, mang đến hương vị hài hòa và hấp dẫn.",
+    "descFeatureSomTum": "Gỏi đu đủ xanh giòn ngon, kết hợp giữa vị cay của ớt, chua thanh của chanh và đậm đà của nước mắm, tạo nên một món ăn tươi mát nhưng đầy kích thích vị giác.",
+    "descFeatureMango": "Xoài chín vàng ngọt lịm kết hợp cùng xôi nếp dẻo thơm, chan thêm nước cốt dừa béo ngậy, tạo nên một món tráng miệng truyền thống hấp dẫn của Thái Lan.",
+    "descTomyum": "Món canh chua cay nổi tiếng của Thái Lan, kết hợp giữa vị cay nồng của ớt, vị chua thanh của chanh và hương thơm từ sả, lá chanh, ăn kèm với tôm tươi ngon.",
+    "descPad": "Món hủ tiếu xào đặc trưng của Thái Lan với sợi mì gạo dai ngon, trứng, đậu hũ, đậu phộng và nước sốt đậm đà, tạo nên hương vị cân bằng giữa ngọt, chua và mặn.",
+    "descCurry": "Cà ri xanh cay nồng với nước cốt dừa béo ngậy, gà mềm và các loại rau thơm, tạo nên sự kết hợp tuyệt vời giữa hương vị cay và béo.",
+    "descDessert": "Món tráng miệng hấp dẫn với xoài chín ngọt lịm, xôi nếp dẻo thơm và nước cốt dừa béo ngậy, mang đến hương vị thanh mát và ngọt ngào."
   }
 }
