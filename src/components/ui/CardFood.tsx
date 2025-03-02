@@ -1,3 +1,5 @@
+'use client';
+import { Tooltip } from '@heroui/react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import React from 'react';
@@ -17,7 +19,9 @@ const CardFood: React.FC<ICard> = ({ desr, img, title, className }) => {
       </div>
       <div className='flex flex-col gap-1'>
         <span className='font-bold text-base'>{title}</span>
-        <span className='line-clamp-3 text-primary text-sm md:text-justify'>{desr}</span>
+        <Tooltip content={<span className='inline-block max-w-52'>{desr}</span>}>
+          <span className='line-clamp-2 text-primary text-sm lg:text-justify'>{desr}</span>
+        </Tooltip>
       </div>
     </div>
   );
