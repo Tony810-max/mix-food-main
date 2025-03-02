@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from './components/Banner';
 import Feature from './components/Feature';
+import Popular from './components/Popular';
 
 const LandingPage = () => {
   return (
@@ -8,6 +9,7 @@ const LandingPage = () => {
       <div className='container'>
         <Banner />
         <Feature />
+        <Popular />
       </div>
     </div>
   );
