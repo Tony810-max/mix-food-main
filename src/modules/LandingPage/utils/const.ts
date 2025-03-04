@@ -1,4 +1,4 @@
-import type { IFeature } from '@/types/common';
+import type { IFeature, IReview } from '@/types/common';
 
 export const limit = 12;
 
@@ -59,5 +59,36 @@ export const getDataPopular = (t: (key: string) => string): IFeature[] => [
     img: '/images/landingPage/mango2.webp',
     title: t('nameMangoDesert'),
     desr: t('descDessert'),
+  },
+];
+
+export const dataReview: IReview[] = [
+  {
+    id: 1,
+    name: 'John Doe',
+    date: 'July 15, 2022',
+    rating: 4,
+    review: 'I love the pad thai and tom yum goong. The taste is authentic and the portion is good too.',
+  },
+  {
+    id: 2,
+    name: 'Tommmy',
+    date: 'July 12, 2022',
+    rating: 5,
+    review: 'I love the pad thai and tom yum goong. The taste is authentic and the portion is good too.',
+  },
+  {
+    id: 3,
+    name: 'Tony',
+    date: 'July 12, 2022',
+    rating: 4,
+    review: 'I love the pad thai and tom yum goong. The taste is authentic and the portion is good too.',
+  },
+  {
+    id: 4,
+    name: 'Tony',
+    date: 'July 16, 2022',
+    rating: 5,
+    review: 'I love the pad thai and tom yum goong. The taste is authentic and the portion is good too.',
   },
 ];

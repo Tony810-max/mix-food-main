@@ -4,3 +4,11 @@ export interface IFeature {
   title: string;
   desr: string;
 }
+
+export interface IReview {
+  id?: number;
+  name: string;
+  date: string;
+  rating: number;
+  review: string;
+}
