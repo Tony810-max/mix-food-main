@@ -5,6 +5,9 @@ import { Star, ThumbsDown, ThumbsUp } from 'lucide-react';
 import React from 'react';
 
 const CustomerRespon: React.FC<IReview> = ({ name, date, rating, review }) => {
+  const [likeActive, setLikeActive] = React.useState(false);
+  const [disLike, setDislike] = React.useState(false);
+
   const renderReview = (rate: number) => {
     return (
       <>
@@ -28,13 +31,45 @@ const CustomerRespon: React.FC<IReview> = ({ name, date, rating, review }) => {
       <span className='inline-block font-medium text-base'>{review}</span>
       <div className='flex items-center gap-4'>
         <div className='flex items-center gap-2'>
-          <motion.div whileTap={{ scale: 1.25, y: -20 }}>
+          <motion.div
+            onClick={() => {
+              setLikeActive(true);
+              setTimeout(() => {
+                setLikeActive(false);
+              }, 500);
+            }}
+            animate={
+              likeActive
+                ? {
+                    scale: [1, 1.5, 1],
+                    rotate: [0, 15, -15, 0],
+                    transition: { duration: 0.5 },
+                  }
+                : {}
+            }
+          >
             <ThumbsUp color='var(--primary-color)' className='hover:cursor-pointer hover:opacity-50' />
           </motion.div>
           <span className='text-primary'>2</span>
         </div>
         <div className='flex items-center gap-2'>
-          <motion.div whileTap={{ scale: 1.25, y: 20 }}>
+          <motion.div
+            onClick={() => {
+              setDislike(true);
+              setTimeout(() => {
+                setDislike(false);
+              }, 500);
+            }}
+            animate={
+              disLike
+                ? {
+                    scale: [1, 1.5, 1],
+                    rotate: [0, 15, -15, 0],
+                    transition: { duration: 0.5 },
+                  }
+                : {}
+            }
+          >
             <ThumbsDown color='var(--primary-color)' className='hover:cursor-pointer hover:opacity-50' />
           </motion.div>
           <span className='text-primary'>2</span>
