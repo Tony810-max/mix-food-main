@@ -11,8 +11,8 @@ const Popular = () => {
     <div className='py-4 max-xl:px-4'>
       <Heading title="What's Popular" />
       <div className='grid grid-cols-2 gap-3 py-4 lg:grid-cols-4'>
-        {populars?.map((popular) => (
-          <CardFood key={popular?.id} img={popular?.img} title={popular?.title} desr={popular?.desr} />
+        {populars?.map((popular, index) => (
+          <CardFood index={index} key={popular?.id} img={popular?.img} title={popular?.title} desr={popular?.desr} />
         ))}
       </div>
     </div>
