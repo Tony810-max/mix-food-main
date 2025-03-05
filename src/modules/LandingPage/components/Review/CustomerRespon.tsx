@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Star, ThumbsDown, ThumbsUp } from 'lucide-react';
 import React from 'react';
 
-const CustomerRespon: React.FC<IReview> = ({ name, date, rating, review }) => {
+const CustomerRespon: React.FC<IReview> = ({ name, date, rating, review, index }) => {
   const [likeActive, setLikeActive] = React.useState(false);
   const [disLike, setDislike] = React.useState(false);
 
@@ -22,7 +22,13 @@ const CustomerRespon: React.FC<IReview> = ({ name, date, rating, review }) => {
   };
 
   return (
-    <div className='space-y-3'>
+    <motion.div
+      initial={{ opacity: 0, translateX: -50 }}
+      whileInView={{ opacity: 1, translateX: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className='space-y-3'
+    >
       <div className='flex flex-col'>
         <span className='font-medium text-base capitalize'>{name}</span>
         <span className='font-normal text-primary text-sm'>{date}</span>
@@ -75,7 +81,7 @@ const CustomerRespon: React.FC<IReview> = ({ name, date, rating, review }) => {
           <span className='text-primary'>2</span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

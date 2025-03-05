@@ -65,6 +65,7 @@ export const getDataPopular = (t: (key: string) => string): IFeature[] => [
 export const dataReview: IReview[] = [
   {
     id: 1,
+    index: 1,
     name: 'John Doe',
     date: 'July 15, 2022',
     rating: 4,
@@ -72,6 +73,7 @@ export const dataReview: IReview[] = [
   },
   {
     id: 2,
+    index: 2,
     name: 'Tommmy',
     date: 'July 12, 2022',
     rating: 5,
@@ -79,6 +81,7 @@ export const dataReview: IReview[] = [
   },
   {
     id: 3,
+    index: 3,
     name: 'Tony',
     date: 'July 12, 2022',
     rating: 4,
@@ -86,6 +89,7 @@ export const dataReview: IReview[] = [
   },
   {
     id: 4,
+    index: 4,
     name: 'Tony',
     date: 'July 16, 2022',
     rating: 5,

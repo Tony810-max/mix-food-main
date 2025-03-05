@@ -8,9 +8,10 @@ const Review = () => {
     <div className='px-4 lg:px-0'>
       <Heading title='Customer Testimonials' />
       <div className='space-y-8 py-4'>
-        {dataReview?.map((review) => (
+        {dataReview?.map((review, index) => (
           <CustomerRespon
             key={review?.id}
+            index={index}
             name={review?.name}
             date={review?.date}
             rating={review?.rating}

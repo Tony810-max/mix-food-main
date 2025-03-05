@@ -11,4 +11,13 @@ export interface IReview {
   date: string;
   rating: number;
   review: string;
+  index: number;
+}
+
+export interface ICard {
+  index: number;
+  img: string;
+  title: string;
+  desr: string;
+  className?: string;
 }
