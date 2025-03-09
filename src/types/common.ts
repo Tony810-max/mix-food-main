@@ -1,3 +1,7 @@
+export interface IHeading {
+  title: string;
+}
+
 export interface IFeature {
   id: number;
   img: string;
