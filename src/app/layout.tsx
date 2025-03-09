@@ -1,4 +1,5 @@
 import { montserrat } from '@/assets/fonts';
+import Footer from '@/components/layouts/Footer';
 import Header from '@/components/layouts/Header';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
@@ -67,6 +68,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           <Providers>
             <Header />
             {children}
+            <Footer />
           </Providers>
         </NextIntlClientProvider>
       </body>

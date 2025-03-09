@@ -5,6 +5,19 @@
     "english": "Tiếng Anh",
     "vietnamese": "Tiếng Việt"
   },
+  "About": {
+    "address": "K38/37 Nguyễn Duy hiệu (K49 Nguyễn Văn Thoại), Quận Sơn Trà, Thành phố Đà Nẵng",
+    "open": "Mở cửa hằng ngày: 8:00 AM - 10:00 PM",
+    "ContactUs": "Liên hệ với chúng tôi"
+  },
+  "Footer": {
+    "des": "Ẩm thực Thái chính gốc, chế biến từ nguyên liệu tươi và công thức truyền thống. Hãy trải nghiệm hương vị đậm đà của Thái Lan.",
+    "QuickLink": "Liên kết nhanh",
+    "Newsletter": "Tin tức & Ưu đãi",
+    "PrivacyPolicy": "Chính sách quyền riêng tư",
+    "TemsOfService": "Điều khoản dịch vụ",
+    "Sitemap": "Sơ đồ trang web"
+  },
   "Auth": {
     "signUp": "Đăng ký",
     "login": "Đăng nhập"

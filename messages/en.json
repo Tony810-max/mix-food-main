@@ -3,6 +3,19 @@
     "english": "English",
     "vietnamese": "Vietnamese"
   },
+  "About": {
+    "address": "K38/37 Nguyen Duy Hieu (K49 Nguyen Van Thoai), Son Tra District, Da Nang City, Vietnam",
+    "open": "Open daily: 8:00 AM - 10:00 PM",
+    "ContactUs": "Contact Us"
+  },
+  "Footer": {
+    "des": "Authentic Thai cuisine made with fresh ingredients and traditional recipes. Experience the vibrant flavors of Thailand.",
+    "QuickLink": "Quick Link",
+    "Newsletter": "Newsletter",
+    "PrivacyPolicy": "Privacy Policy",
+    "TemsOfService": "Tems of Service",
+    "Sitemap": "Sitemap"
+  },
   "Auth": {
     "signUp": "Sign Up",
     "login": "Login"
