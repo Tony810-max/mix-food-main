@@ -12,7 +12,7 @@ const CardFood: React.FC<ICard> = ({ desr, img, title, className, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: 'easeInOut', delay: index * 0.25 }}
-      className={clsx('space-y-3 rounded-md', className)}
+      className={clsx('space-y-3 rounded-3xl', className)}
     >
       <div className='relative aspect-[3/2]'>
         <Image src={img} alt='img Feature' className='rounded-lg' fill unoptimized priority />
