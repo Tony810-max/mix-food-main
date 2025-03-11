@@ -11,7 +11,7 @@ const CardFood: React.FC<ICard> = ({ desr, img, title, className, index }) => {
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, ease: 'easeInOut', delay: index * 0.25 }}
+      transition={{ duration: 0.5, ease: 'easeInOut', delay: index * 0.1 }}
       className={clsx('space-y-3 rounded-3xl', className)}
     >
       <div className='relative aspect-[3/2]'>
