@@ -12,7 +12,7 @@ const Newsletter = () => {
       transition={{ duration: 1 }}
     >
       <Heading title='Newsletter' />
-      <span>Subscribe to get the latest updates and promotions.</span>
+      <span className='text-white'>Subscribe to get the latest updates and promotions.</span>
       <FormNewsLetter />
     </motion.div>
   );

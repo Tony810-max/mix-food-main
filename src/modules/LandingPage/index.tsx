@@ -1,7 +1,9 @@
 import React from 'react';
 import Banner from './components/Banner';
 import Feature from './components/Feature';
+import LastedUpdate from './components/LastedUpdate';
 import Popular from './components/Popular';
+import PopularFood from './components/PopularFood';
 import Review from './components/Review';
 
 const LandingPage = () => {
@@ -12,6 +14,8 @@ const LandingPage = () => {
         <Feature />
         <Popular />
         <Review />
+        <PopularFood />
+        <LastedUpdate />
       </div>
     </div>
   );

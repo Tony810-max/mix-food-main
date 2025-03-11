@@ -1,9 +1,5 @@
 import { ROUTES } from '@/lib/routes';
-
-export interface INAV {
-  label: string;
-  href: string;
-}
+import type { INAV } from '@/types/common';
 
 export const getNav = (t: (key: string) => string): INAV[] => [
   {
