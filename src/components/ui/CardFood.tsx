@@ -19,7 +19,7 @@ const CardFood: React.FC<ICard> = ({ desr, img, title, className, index }) => {
       </div>
       <div className='flex flex-col gap-1'>
         <span className='font-bold text-base'>{title}</span>
-        <span className='line-clamp-3 text-primary text-sm md:text-justify'>{desr}</span>
+        <span className='line-clamp-3 text-primary text-sm'>{desr}</span>
       </div>
     </motion.div>
   );
