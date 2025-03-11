@@ -12,6 +12,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      padding: {
+        paddingSection: 'var(--padding-section)',
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

@@ -5,9 +5,9 @@ import CustomerRespon from './CustomerRespon';
 
 const Review = () => {
   return (
-    <div className='px-4 lg:px-0'>
+    <div className='space-y-4 p-paddingYSection px-4 py-paddingSection lg:px-0'>
       <Heading title='Customer Testimonials' />
-      <div className='space-y-8 py-4'>
+      <div className='space-y-8'>
         {dataReview?.map((review, index) => (
           <CustomerRespon
             key={review?.id}

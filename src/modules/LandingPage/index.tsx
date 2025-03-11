@@ -6,9 +6,9 @@ import Review from './components/Review';
 
 const LandingPage = () => {
   return (
-    <div className='mt-20 flex justify-center lg:mt-[6.5rem] xl:mt-20'>
-      <div className='container'>
-        <Banner />
+    <div className='mt-[4.5rem]'>
+      <Banner />
+      <div className='container mx-auto'>
         <Feature />
         <Popular />
         <Review />

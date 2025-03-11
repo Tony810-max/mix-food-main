@@ -8,7 +8,7 @@ const Popular = () => {
   const t = useTranslations('HomePage');
   const populars = getDataPopular(t);
   return (
-    <div className='py-4 max-xl:px-4'>
+    <div className='p-paddingYSection max-xl:px-4'>
       <Heading title="What's Popular" />
       <div className='grid grid-cols-2 gap-3 py-4 lg:grid-cols-4'>
         {populars?.map((popular, index) => (
