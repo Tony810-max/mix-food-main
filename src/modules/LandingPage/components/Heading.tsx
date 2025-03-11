@@ -1,10 +1,7 @@
 'use client';
+import type { IHeading } from '@/types/common';
 import { motion } from 'framer-motion';
 import React from 'react';
-
-interface IHeading {
-  title: string;
-}
 
 const Heading: React.FC<IHeading> = ({ title }) => {
   return (

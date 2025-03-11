@@ -1,12 +1,14 @@
+import { useTranslations } from 'next-intl';
 import React from 'react';
 import { dataReview } from '../../utils/const';
 import Heading from '../Heading';
 import CustomerRespon from './CustomerRespon';
 
 const Review = () => {
+  const t = useTranslations('HomePage');
   return (
     <div className='space-y-4 p-paddingYSection px-4 py-paddingSection lg:px-0'>
-      <Heading title='Customer Testimonials' />
+      <Heading title={t('customer-review')} />
       <div className='space-y-8'>
         {dataReview?.map((review, index) => (
           <CustomerRespon

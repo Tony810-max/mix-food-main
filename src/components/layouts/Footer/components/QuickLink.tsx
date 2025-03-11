@@ -20,7 +20,7 @@ const QuickLink = () => {
       <Heading title={tFooter('QuickLink')} />
       <div className='flex flex-col gap-2'>
         {nav?.map((nav, index) => (
-          <Link href={nav?.href} key={index} className='hover:font-semibold hover:text-primary'>
+          <Link href={nav?.href} key={index} className='text-white hover:font-semibold hover:text-primary'>
             {nav?.label}
           </Link>
         ))}

@@ -1,9 +1,6 @@
 'use client';
-import { ROUTES } from '@/lib/routes';
 import { motion } from 'framer-motion';
-import { Facebook } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import React from 'react';
 import Heading from './Heading';
 const About = () => {
@@ -16,10 +13,7 @@ const About = () => {
       transition={{ duration: 1 }}
     >
       <Heading title='Mix Food' />
-      <p>{t('des')}</p>
-      <Link href={ROUTES?.FACEBOOK} className='block py-2 hover:opacity-70'>
-        <Facebook color='var(--primary-color)' />
-      </Link>
+      <p className='text-white'>{t('des')}</p>
     </motion.div>
   );
 };

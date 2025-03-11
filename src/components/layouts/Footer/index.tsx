@@ -8,7 +8,7 @@ import QuickLink from './components/QuickLink';
 
 const Footer = () => {
   return (
-    <div className='border-t px-6 pt-12 lg:px-0'>
+    <div className='bg-[#1a1a1a] px-6 pt-12 lg:px-0'>
       <div className='container mx-auto'>
         <div className='grid gap-6 pb-6 sm:grid-cols-2 lg:grid-cols-4'>
           <About />
