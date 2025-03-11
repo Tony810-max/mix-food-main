@@ -1,16 +1,22 @@
+'use client';
+import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
 import { getNav } from '../../Header/utils/const';
 import Heading from './Heading';
-
 const QuickLink = () => {
   const t = useTranslations('HomePage');
   const tFooter = useTranslations('Footer');
   const nav = getNav(t);
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    >
       <Heading title={tFooter('QuickLink')} />
       <div className='flex flex-col gap-2'>
         {nav?.map((nav, index) => (
@@ -19,7 +25,7 @@ const QuickLink = () => {
           </Link>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
