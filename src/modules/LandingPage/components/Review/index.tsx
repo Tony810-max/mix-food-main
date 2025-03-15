@@ -1,8 +1,8 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
-import { dataReview } from '../../utils/const';
+import { REVIEW_DATA } from '../../utils/const';
 import Heading from '../Heading';
-import CustomerRespon from './CustomerRespon';
+import ReviewItem from './ReviewItem';
 
 const Review = () => {
   const t = useTranslations('HomePage');
@@ -10,15 +10,8 @@ const Review = () => {
     <div className='space-y-4 p-paddingYSection px-4 py-paddingSection lg:px-0'>
       <Heading title={t('customer-review')} />
       <div className='space-y-8'>
-        {dataReview?.map((review, index) => (
-          <CustomerRespon
-            key={review?.id}
-            index={index}
-            name={review?.name}
-            date={review?.date}
-            rating={review?.rating}
-            review={review?.review}
-          />
+        {REVIEW_DATA?.map((review, index) => (
+          <ReviewItem key={`${review?.name}-${index}`} index={index} {...review} />
         ))}
       </div>
     </div>

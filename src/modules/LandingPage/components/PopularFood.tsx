@@ -12,7 +12,7 @@ const PopularFood = () => {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: index * 0.25 }}
           viewport={{ once: true }}
-          className='relative aspect-[3/2]'
+          className='relative aspect-[3/2] overflow-hidden rounded-[.5rem]'
           key={index}
         >
           <Image
@@ -21,7 +21,7 @@ const PopularFood = () => {
             fill
             priority
             unoptimized
-            className='rounded-xl'
+            className='object-cover'
           />
         </motion.div>
       ))}

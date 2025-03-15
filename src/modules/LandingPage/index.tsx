@@ -1,17 +1,19 @@
+import dynamic from 'next/dynamic';
 import React from 'react';
-import Banner from './components/Banner';
-import Feature from './components/Feature';
-import LastedUpdate from './components/LastedUpdate';
-import Popular from './components/Popular';
-import PopularFood from './components/PopularFood';
-import Review from './components/Review';
+
+const Banner = dynamic(() => import('./components/Banner'));
+const BestSeller = dynamic(() => import('./components/BestSeller'));
+const LastedUpdate = dynamic(() => import('./components/LastedUpdate'));
+const Popular = dynamic(() => import('./components/Popular'));
+const PopularFood = dynamic(() => import('./components/PopularFood'));
+const Review = dynamic(() => import('./components/Review'));
 
 const LandingPage = () => {
   return (
     <div className='mt-[4.5rem]'>
       <Banner />
       <div className='container mx-auto'>
-        <Feature />
+        <BestSeller />
         <Popular />
         <Review />
         <PopularFood />
