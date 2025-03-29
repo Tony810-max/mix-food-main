@@ -4,7 +4,7 @@ import type { INAV } from '@/types/common';
 export const getNav = (t: (key: string) => string): INAV[] => [
   {
     label: t('menu'),
-    href: ROUTES?.LANDING_PAGE,
+    href: ROUTES?.MENU,
   },
   {
     label: t('offer'),
