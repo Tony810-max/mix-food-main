@@ -8,14 +8,14 @@ export const getNav = (t: (key: string) => string): INAV[] => [
   },
   {
     label: t('offer'),
-    href: ROUTES?.LANDING_PAGE,
+    href: ROUTES?.OFFFER,
   },
   {
     label: t('location'),
-    href: ROUTES?.LANDING_PAGE,
+    href: ROUTES?.LOCATION,
   },
   {
     label: t('delivery'),
-    href: ROUTES?.LANDING_PAGE,
+    href: ROUTES?.DELIVERY,
   },
 ];
