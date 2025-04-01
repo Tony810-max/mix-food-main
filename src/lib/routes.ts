@@ -1,9 +1,9 @@
 export const ROUTES = {
   LANDING_PAGE: '/',
-  BOOKING_PAGE: '/booking',
+  BOOK: '/book',
   OFFFER: '/booking',
   MENU: '/menu',
-  LOCATION: '/booking',
+  LOCATION: '/locations',
   DELIVERY: '/booking',
   SIGN_UP: '/signup',
   LOGIN: '/login',

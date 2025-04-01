@@ -1,4 +1,5 @@
 'use client';
+import Heading from '@/components/Heading';
 import React from 'react';
 import CarouselCardFood from './CarouselCardFood';
 import TabFoodMenu from './TabFoodMenu';
@@ -8,7 +9,7 @@ const ContentMenu = () => {
   return (
     <div className='container mx-auto py-12'>
       <TabFoodMenu />
-      <p className='py-8 text-center font-semibold text-3xl text-primary capitalize'>Curries</p>
+      <Heading title='Curries' className='py-4' />
       <CarouselCardFood />
     </div>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 import HeadingBanner from './HeadingBanner';
 import SearchFood from './SearchFood';
 
-const Banner = () => {
+const BannerLandingPage = () => {
   return (
     <div className='relative h-[calc(100vh-72px)] text-white'>
       <Image
@@ -25,4 +25,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default BannerLandingPage;
