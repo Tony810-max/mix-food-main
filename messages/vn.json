@@ -19,8 +19,7 @@
     "Sitemap": "Sơ đồ trang web"
   },
   "Auth": {
-    "signUp": "Đăng ký",
-    "login": "Đăng nhập"
+    "auth": "Đăng nhập / Đăng ký"
   },
   "HomePage": {
     "menu": "Thực đơn",

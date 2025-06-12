@@ -21,7 +21,7 @@ const LikeButton = () => {
         }
       }
     >
-      <Icons.thumbsUp color='var(--primary-color)' className='hover:cursor-pointer hover:opacity-50' />
+      <Icons.ThumbsUp color='var(--primary-color)' className='hover:cursor-pointer hover:opacity-50' />
     </motion.div>
   );
 };

@@ -8,7 +8,7 @@ export const getNav = (t: (key: string) => string): INAV[] => [
   },
   {
     label: t('offer'),
-    href: ROUTES?.OFFFER,
+    href: ROUTES?.OFFER,
   },
   {
     label: t('location'),

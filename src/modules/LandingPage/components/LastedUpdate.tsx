@@ -2,9 +2,12 @@
 import { ROUTES } from '@/lib/routes';
 import { Button } from '@heroui/react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
 const LastedUpdate = () => {
+  const t = useTranslations('Auth');
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -100 }}
@@ -17,8 +20,8 @@ const LastedUpdate = () => {
         <span className='text-center font-bold text-2xl md:text-4xl'>Get the latest updates</span>
         <span className='text-center'>Sign up to receive news and promotions from Thai Food in Vietnam</span>
       </div>
-      <Link href={ROUTES?.SIGN_UP}>
-        <Button color='primary'>Sign Up</Button>
+      <Link href={ROUTES?.AUTHENTICATION}>
+        <Button color='primary'>{t('auth')}</Button>
       </Link>
     </motion.div>
   );

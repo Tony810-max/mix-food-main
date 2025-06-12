@@ -4,6 +4,8 @@
 
 :root {
   --primary-color: #99634d;
+  --heroui-focus: 0 0% 100%; 
+  --heroui-focus-opacity: 0;
 }
 
 .bg-primary-100 {
