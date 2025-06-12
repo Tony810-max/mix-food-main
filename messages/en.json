@@ -17,8 +17,7 @@
     "Sitemap": "Sitemap"
   },
   "Auth": {
-    "signUp": "Sign Up",
-    "login": "Login"
+    "auth": "Sign In / Sign Up"
   },
   "HomePage": {
     "menu": "Menu",

@@ -1,11 +1,10 @@
 export const ROUTES = {
   LANDING_PAGE: '/',
   BOOK: '/book',
-  OFFFER: '/booking',
+  OFFER: '/offer',
   MENU: '/menu',
   LOCATION: '/locations',
-  DELIVERY: '/booking',
-  SIGN_UP: '/signup',
-  LOGIN: '/login',
+  DELIVERY: '/delivery',
   FACEBOOK: 'https://www.facebook.com/mixfoodamthucthai',
+  AUTHENTICATION: '/authentication',
 } as const;

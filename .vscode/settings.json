@@ -42,5 +42,5 @@
   "[json]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "cSpell.words": ["tailwindcss"]
+  "cSpell.words": ["heroui", "tailwindcss"]
 }

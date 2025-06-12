@@ -1,8 +1,7 @@
 import { useTranslations } from 'next-intl';
-// import Link from 'next/link';
+import Link from 'next/link';
 import React from 'react';
 import { getNav } from '../utils/const';
-import Link from 'next/link';
 
 const Navbar = () => {
   const t = useTranslations('HomePage');

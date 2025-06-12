@@ -21,7 +21,7 @@ const DislikeButton = () => {
         }
       }
     >
-      <Icons.thumbsDown color='var(--primary-color)' className='hover:cursor-pointer hover:opacity-50' />
+      <Icons.ThumbsDown color='var(--primary-color)' className='hover:cursor-pointer hover:opacity-50' />
     </motion.div>
   );
 };
