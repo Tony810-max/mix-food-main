@@ -14,4 +14,8 @@ export const navData = (t: (key: string) => string): INav[] => [
     label: t('location'),
     href: ROUTES?.LOCATION,
   },
+  {
+    label: t('about'),
+    href: ROUTES?.ABOUT,
+  },
 ];

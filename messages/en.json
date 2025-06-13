@@ -20,6 +20,7 @@
     "auth": "Sign In / Sign Up"
   },
   "HomePage": {
+    "about": "About",
     "menu": "Menu",
     "book_table": "Book a table",
     "location": "Locations",
