@@ -1,5 +1,7 @@
 'use client';
 
+import { Icons } from '@/assets/icons';
+import InputLabel from '@/components/InputLabel';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Input } from '@/components/ui/input';
@@ -24,9 +26,6 @@ export const BookingForm = () => {
   } = useForm<BookingFormValues>({
     resolver: zodResolver(bookingSchema),
     mode: 'onChange',
-    defaultValues: {
-      datetime: new Date().toISOString(),
-    },
   });
 
   const selectedDateTime = watch('datetime');
@@ -40,25 +39,42 @@ export const BookingForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
       <div className='grid gap-4'>
         <div className='grid gap-2'>
-          <Label htmlFor='name'>Full Name</Label>
-          <Input id='name' placeholder='John Doe' {...register('name')} />
-          {errors.name && <p className='text-red-500 text-sm'>{errors.name.message}</p>}
+          <InputLabel
+            type='text'
+            IconStart={Icons?.User}
+            label='Full Name'
+            placeHolder='Enter your full name'
+            {...register('name')}
+            errorMessage={errors.name?.message as string}
+          />
         </div>
 
         <div className='grid gap-2'>
-          <Label htmlFor='email'>Email</Label>
-          <Input id='email' type='email' placeholder='john@example.com' {...register('email')} />
-          {errors.email && <p className='text-red-500 text-sm'>{errors.email.message}</p>}
+          <InputLabel
+            type='mail'
+            IconStart={Icons?.MailIcon}
+            label='Email'
+            placeHolder='Enter your email'
+            {...register('email')}
+            errorMessage={errors.email?.message as string}
+          />
         </div>
 
         <div className='grid gap-2'>
-          <Label htmlFor='phone'>Phone Number</Label>
-          <Input id='phone' type='tel' placeholder='1234567890' {...register('phone')} />
-          {errors.phone && <p className='text-red-500 text-sm'>{errors.phone.message}</p>}
+          <InputLabel
+            type='text'
+            IconStart={Icons?.Phone}
+            label='Phone Number'
+            placeHolder='Enter your phone number'
+            {...register('phone')}
+            errorMessage={errors.phone?.message as string}
+          />
         </div>
 
         <div className='grid gap-2'>
-          <Label htmlFor='datetime'>Date and Time</Label>
+          <Label htmlFor='datetime' className='font-bold'>
+            Date and Time<span className='text-[#f31064]'>*</span>
+          </Label>
           <Popover>
             <PopoverTrigger asChild>
               <Button
@@ -105,7 +121,9 @@ export const BookingForm = () => {
         </div>
 
         <div className='grid gap-2'>
-          <Label htmlFor='guests'>Number of Guests</Label>
+          <Label htmlFor='guests' className='font-bold'>
+            Number of Guests<span className='text-[#f31064]'>*</span>{' '}
+          </Label>
           <Select onValueChange={(value) => setValue('guests', parseInt(value))}>
             <SelectTrigger>
               <SelectValue placeholder='Select number of guests' />
@@ -122,13 +140,16 @@ export const BookingForm = () => {
         </div>
 
         <div className='grid gap-2'>
-          <Label htmlFor='specialRequests'>Special Requests</Label>
+          <Label htmlFor='specialRequests' className='font-bold'>
+            Special Requests<span className='text-[#f31064]'>*</span>
+          </Label>
           <Textarea
             id='specialRequests'
             placeholder='Any special requests or dietary preferences...'
             className='resize-none'
             {...register('specialRequests')}
           />
+          {errors.specialRequests && <p className='text-red-500 text-sm'>{errors.specialRequests.message}</p>}
         </div>
       </div>
 
