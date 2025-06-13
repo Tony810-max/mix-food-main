@@ -1,12 +1,13 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
-import { getNav } from '../utils/const';
+import { navData } from '../utils/const';
 
 const Navbar = () => {
   const t = useTranslations('HomePage');
 
-  const nav = getNav(t);
+  const nav = navData(t);
+
   return (
     <div className='flex flex-col gap-5 py-4 lg:flex-row lg:items-center lg:gap-9'>
       {nav?.map((item, index) => (

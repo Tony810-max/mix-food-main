@@ -21,9 +21,8 @@
   },
   "HomePage": {
     "menu": "Menu",
-    "offer": "Offers",
+    "book_table": "Book a table",
     "location": "Locations",
-    "delivery": "Delivery",
     "search": "Search",
     "find-food": "Find Food",
     "title-banner": "Introducing Thai Food",
