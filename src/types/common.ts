@@ -9,7 +9,7 @@ export interface IIconLabel {
   label: string;
 }
 
-export interface INAV {
+export interface INav {
   label: string;
   href: string;
 }

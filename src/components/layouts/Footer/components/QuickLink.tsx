@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
-import { getNav } from '../../Header/utils/const';
+import { navData } from '../../Header/utils/const';
 import Heading from './Heading';
 const QuickLink = () => {
   const t = useTranslations('HomePage');
   const tFooter = useTranslations('Footer');
-  const nav = getNav(t);
+  const nav = navData(t);
 
   return (
     <motion.div
