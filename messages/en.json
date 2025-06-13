@@ -1,9 +1,23 @@
 {
   "Language": {
+    "language": "Language",
+    "selectLangue": "Select Language",
     "english": "English",
     "vietnamese": "Vietnamese"
   },
   "About": {
+    "address": "K38/37 Nguyen Duy Hieu (K49 Nguyen Van Thoai), Son Tra District, Da Nang City, Vietnam",
+    "open": "Open daily: 8:00 AM - 10:00 PM",
+    "ContactUs": "Contact Us"
+  },
+  "AboutPage": {
+    "title": "Mix Food",
+    "subtitle": "Authentic Thai Cuisine in Da Nang, Vietnam",
+    "story": "Mix Food is a premium Thai restaurant located in the heart of Da Nang, Vietnam. Since our establishment, we've been dedicated to bringing authentic Thai flavors to our beloved city. Our passion for Thai cuisine is reflected in every dish we serve.\n\nWe take pride in using traditional Thai recipes and locally sourced ingredients to create an unforgettable dining experience. Our chefs are trained in authentic Thai culinary techniques, ensuring each dish captures the essence of Thailand's rich culinary heritage.",
+    "specialty1": "Traditional Thai Curries",
+    "specialty2": "Authentic Pad Thai",
+    "specialty3": "Signature Thai Salads",
+    "specialty4": "Traditional Thai Desserts",
     "address": "K38/37 Nguyen Duy Hieu (K49 Nguyen Van Thoai), Son Tra District, Da Nang City, Vietnam",
     "open": "Open daily: 8:00 AM - 10:00 PM",
     "ContactUs": "Contact Us"
@@ -20,6 +34,8 @@
     "auth": "Sign In / Sign Up"
   },
   "HomePage": {
+    "offer": "Offer",
+    "delivery": "Delivery",
     "about": "About",
     "menu": "Menu",
     "book_table": "Book a table",

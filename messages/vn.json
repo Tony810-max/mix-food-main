@@ -10,6 +10,18 @@
     "open": "Mở cửa hằng ngày: 8:00 AM - 10:00 PM",
     "ContactUs": "Liên hệ với chúng tôi"
   },
+  "AboutPage": {
+    "title": "Mix Food",
+    "subtitle": "Ẩm thực Thái chính gốc tại Đà Nẵng, Việt Nam",
+    "story": "Mix Food là nhà hàng Thái cao cấp nằm ngay trung tâm thành phố Đà Nẵng. Từ khi thành lập, chúng tôi luôn tận tâm mang đến hương vị Thái Lan đích thực cho thành phố thân yêu này. Niềm đam mê với ẩm thực Thái được gửi gắm trong từng món ăn phục vụ khách hàng.\n\nChúng tôi tự hào sử dụng công thức truyền thống và nguyên liệu địa phương để tạo nên trải nghiệm ẩm thực khó quên. Đội ngũ đầu bếp của chúng tôi được đào tạo bài bản về kỹ thuật nấu ăn Thái, đảm bảo mỗi món ăn đều giữ trọn tinh hoa ẩm thực Thái Lan.",
+    "specialty1": "Các món cà ri Thái truyền thống",
+    "specialty2": "Pad Thai chuẩn vị",
+    "specialty3": "Gỏi Thái đặc trưng",
+    "specialty4": "Món tráng miệng Thái truyền thống",
+    "address": "K38/37 Nguyễn Duy hiệu (K49 Nguyễn Văn Thoại), Quận Sơn Trà, Thành phố Đà Nẵng",
+    "open": "Mở cửa hằng ngày: 8:00 AM - 10:00 PM",
+    "ContactUs": "Liên hệ với chúng tôi"
+  },
   "Footer": {
     "des": "Ẩm thực Thái chính gốc, chế biến từ nguyên liệu tươi và công thức truyền thống. Hãy trải nghiệm hương vị đậm đà của Thái Lan.",
     "QuickLink": "Liên kết nhanh",
@@ -25,6 +37,8 @@
     "menu": "Thực đơn",
     "offer": "Khuyến mãi",
     "location": "Địa điểm",
+    "about": "Giới thiệu",
+    "book_table": "Đặt bàn",
     "delivery": "Vận chuyển",
     "search": "Tìm kiếm",
     "find-food": "Tìm món ăn",
