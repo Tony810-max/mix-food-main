@@ -9,7 +9,7 @@
     "address_title": "Address",
     "open_title": "Open daily",
     "address": "K38/37 Nguyen Duy Hieu (K49 Nguyen Van Thoai), Son Tra District, Da Nang City, Vietnam",
-    "open": "8:00 AM - 10:00 PM",
+    "open_time": "8:00 AM - 10:00 PM",
     "ContactUs": "Contact Us"
   },
   "Location": {
