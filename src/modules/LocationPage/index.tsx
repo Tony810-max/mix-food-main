@@ -4,7 +4,7 @@ import ContentLocations from './components/ContentLocations';
 
 const LocationsPage = () => {
   return (
-    <div>
+    <div className='mt-[4.5rem] min-h-[calc(100vh-72px)]'>
       <BannerLocations />
       <ContentLocations />
     </div>

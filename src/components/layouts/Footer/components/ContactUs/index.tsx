@@ -21,7 +21,7 @@ const ContactUs = () => {
         <IconLabel Icon={MapPin} label={t('address')} />
         <IconLabel Icon={Phone} label='(+84)905.47.37.28' />
         <IconLabel Icon={Mail} label='mixfood1708@gmail.com' />
-        <IconLabel Icon={Clock} label={t('open')} />
+        <IconLabel Icon={Clock} label={t('open_time')} />
       </div>
     </motion.div>
   );

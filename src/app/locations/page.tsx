@@ -1,3 +1,3 @@
-import LocationsPage from '@/modules/AuthPage';
+import LocationsPage from '@/modules/LocationPage';
 
 export default LocationsPage;
