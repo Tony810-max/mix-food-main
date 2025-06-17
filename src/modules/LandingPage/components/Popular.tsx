@@ -13,13 +13,7 @@ const Popular = () => {
       <Heading title="What's Popular" />
       <div className='grid grid-cols-2 gap-3 lg:grid-cols-4'>
         {populars?.map((popular, index) => (
-          <CardFood
-            index={index}
-            key={popular?.id}
-            img={popular?.img}
-            title={popular?.title}
-            description={popular?.description}
-          />
+          <CardFood index={index} key={popular?.id} {...popular} />
         ))}
       </div>
     </div>
