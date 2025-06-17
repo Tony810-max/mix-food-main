@@ -11,15 +11,9 @@ const BestSeller = () => {
   return (
     <div className='p-paddingYSection'>
       <Heading title='Best seller' />
-      <div className='grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4'>
+      <div className='grid grid-cols-2 gap-3 lg:grid-cols-4'>
         {dataFeature?.map((feature, index) => (
-          <CardFood
-            index={index}
-            key={feature?.id}
-            img={feature?.img}
-            title={feature?.title}
-            description={feature?.description}
-          />
+          <CardFood index={index} key={feature?.id} {...feature} />
         ))}
       </div>
     </div>

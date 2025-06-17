@@ -3,6 +3,9 @@ export interface IFeature {
   img: string;
   title: string;
   description: string;
+  category: string;
+  time: string;
+  price: string;
 }
 
 export interface IReview {
