@@ -9,13 +9,13 @@ import Navbar from '../Navbar';
 const Sidebar = () => {
   return (
     <Sheet>
-      <SheetTrigger>
+      <SheetTrigger className='lg:hidden'>
         <AlignJustify color='var(--primary-color)' />
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
           <SheetTitle className='flex items-center justify-between'>
-            <Logo />
+            <Logo className='flex' />
           </SheetTitle>
           <SheetDescription></SheetDescription>
         </SheetHeader>
