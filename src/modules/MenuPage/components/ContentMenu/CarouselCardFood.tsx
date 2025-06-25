@@ -1,65 +1,16 @@
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import CardFood from '@/components/CardFood';
 import React from 'react';
-import CardFood from './CardFood';
+import { products } from '../../utils/const';
 
 const CarouselCardFood = () => {
   return (
-    <Carousel>
-      <CarouselContent>
-        <CarouselItem className='grid gap-6 md:grid-cols-2'>
-          <CardFood
-            name='Tod Mun Pla'
-            price={9000}
-            description='Thai fish cakes with red curry paste, kaffir lime leaves, and green beans'
-            isSpicy={true}
-          />
-          <CardFood
-            name='Tod Mun Pla'
-            price={9000}
-            description='Thai fish cakes with red curry paste, kaffir lime leaves, and green beans'
-            isSpicy={true}
-          />
-          <CardFood
-            name='Tod Mun Pla'
-            price={9000}
-            description='Thai fish cakes with red curry paste, kaffir lime leaves, and green beans'
-            isSpicy={true}
-          />
-          <CardFood
-            name='Tod Mun Pla'
-            price={9000}
-            description='Thai fish cakes with red curry paste, kaffir lime leaves, and green beans'
-            isSpicy={true}
-          />
-        </CarouselItem>
-        <CarouselItem className='grid gap-6 md:grid-cols-2'>
-          <CardFood
-            name='Tod Mun Pla'
-            price={9000}
-            description='Thai fish cakes with red curry paste, kaffir lime leaves, and green beans'
-            isSpicy={true}
-          />
-          <CardFood
-            name='Tod Mun Pla'
-            price={9000}
-            description='Thai fish cakes with red curry paste, kaffir lime leaves, and green beans'
-            isSpicy={true}
-          />
-          <CardFood
-            name='Tod Mun Pla'
-            price={9000}
-            description='Thai fish cakes with red curry paste, kaffir lime leaves, and green beans'
-            isSpicy={true}
-          />
-          <CardFood
-            name='Tod Mun Pla'
-            price={9000}
-            description='Thai fish cakes with red curry paste, kaffir lime leaves, and green beans'
-            isSpicy={true}
-          />
-        </CarouselItem>
-      </CarouselContent>
-    </Carousel>
+    <div className='grid grid-cols-4'>
+      {products.map((product, idx) => (
+        <div className='flex h-full w-full transform transition-all duration-500 ease-in-out ' key={idx}>
+          <CardFood index={idx} {...product} />
+        </div>
+      ))}
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import CardFood from '@/components/ui/CardFood';
+import CardFood from '@/components/CardFood';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import { getDataPopular } from '../utils/function';
