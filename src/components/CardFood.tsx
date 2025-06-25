@@ -7,10 +7,10 @@ import Image from 'next/image';
 import type { FC, HTMLAttributes } from 'react';
 
 export interface ICardFoodProps extends Pick<HTMLAttributes<HTMLDivElement>, 'className' | 'onClick'> {
-  index: number;
+  index?: number;
   img: string;
   title: string;
-  description: string;
+  description?: string;
   category: string;
   time: string;
   price: string;
@@ -32,7 +32,7 @@ const CardFood: FC<ICardFoodProps> = ({
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.3, delay: 0 + index * 0.3 }}
+      transition={{ duration: 0.3, delay: 0 + (index || 1) * 0.3 }}
       className={clsx(
         'group hover:-translate-y-1 space-y-3 rounded-xl bg-white p-3 shadow-md transition-transform duration-300 hover:shadow-lg',
         className
@@ -54,7 +54,7 @@ const CardFood: FC<ICardFoodProps> = ({
       </div>
       <div className='flex flex-col gap-1'>
         <span className='line-clamp-1 font-semibold text-gray-900 text-lg'>{title}</span>
-        <span className='line-clamp-3 text-gray-600 text-sm'>{description}</span>
+        {description && <span className='line-clamp-3 text-gray-600 text-sm'>{description}</span>}
         <div className='mt-2 flex items-center justify-between'>
           <span className='flex items-center gap-1 text-gray-500 text-xs'>
             <Clock className='h-3.5 w-3.5' /> {time}
