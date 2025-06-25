@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import AboutSection from './components/AboutSection';
 import ConnectSection from './components/ConnectSection';
-import HeroSection from './components/HeroSection';
+import HeroSection from '../../components/HeroSection';
 
 // All text is now translated using next-intl
 

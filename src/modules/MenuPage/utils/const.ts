@@ -22,4 +22,28 @@ export const products: ICardFoodProps[] = [
     time: '30 minutes',
     price: '$10',
   },
+  {
+    title: 'Green Curry',
+    description: 'Classic Thai green curry with chicken, eggplant, and basil.',
+    category: 'curries',
+    img: '/images/landingPage/tomyum2.webp',
+    time: '30 minutes',
+    price: '$10',
+  },
+  {
+    title: 'Green Curry',
+    description: 'Classic Thai green curry with chicken, eggplant, and basil.',
+    category: 'curries',
+    img: '/images/landingPage/tomyum2.webp',
+    time: '30 minutes',
+    price: '$10',
+  },
+  {
+    title: 'Green Curry',
+    description: 'Classic Thai green curry with chicken, eggplant, and basil.',
+    category: 'curries',
+    img: '/images/landingPage/tomyum2.webp',
+    time: '30 minutes',
+    price: '$10',
+  },
 ];
