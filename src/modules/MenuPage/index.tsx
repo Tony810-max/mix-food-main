@@ -1,12 +1,11 @@
 import React from 'react';
-
-import BannerMenu from './components/BannerMenu';
+import HeroSection from '../../components/HeroSection';
 import ContentMenu from './components/ContentMenu';
 
 const MenuPage = () => {
   return (
     <div>
-      <BannerMenu />
+      <HeroSection title='Menu' subtitle='Discover our menu' />
       <ContentMenu />
     </div>
   );
