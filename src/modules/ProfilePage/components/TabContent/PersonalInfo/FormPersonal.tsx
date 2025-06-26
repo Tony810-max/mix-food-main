@@ -1,0 +1,96 @@
+import InputLabel from '@/components/InputLabel';
+import { zodResolver } from '@hookform/resolvers/zod';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+
+import { Icons } from '@/assets/icons';
+import { schemaProfile } from '@/modules/ProfilePage/utils/schema';
+import type { z } from 'zod';
+
+type FormData = z.infer<typeof schemaProfile>;
+
+const FormPersonal = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: zodResolver(schemaProfile),
+    mode: 'onChange',
+    defaultValues: {
+      // fullName: 'John Doe',
+      // email: 'john.doe@example.com',
+      // phone: '+1 (555) 123-4567',
+      // birthday: '15/05/1990',
+      // address: '123 Main St, New York, NY 10001',
+      // bio: 'Food enthusiast who loves trying new cuisines and sharing great dining experiences.',
+    },
+  });
+
+  const onSubmit = (data: FormData) => {
+    console.log(data);
+  };
+
+  return (
+    <form className='space-y-6' onSubmit={handleSubmit(onSubmit)}>
+      <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
+        <InputLabel
+          label='Full Name'
+          placeHolder='John Doe'
+          type='text'
+          IconStart={Icons.User}
+          errorMessage={errors.fullName?.message}
+          {...register('fullName')}
+        />
+        <InputLabel
+          label='Email'
+          placeHolder='john.doe@example.com'
+          type='email'
+          IconStart={Icons.MailIcon}
+          errorMessage={errors.email?.message}
+          {...register('email')}
+        />
+        <InputLabel
+          label='Phone Number'
+          placeHolder='+1 (555) 123-4567'
+          type='text'
+          IconStart={Icons.Phone}
+          errorMessage={errors.phone?.message}
+          {...register('phone')}
+        />
+        <InputLabel
+          label='Birthday'
+          placeHolder='15/05/1990'
+          type='text'
+          IconStart={Icons.Calendar ? Icons.Calendar : Icons.User}
+          errorMessage={errors.birthday?.message}
+          {...register('birthday')}
+        />
+      </div>
+      <InputLabel
+        label='Address'
+        placeHolder='123 Main St, New York, NY 10001'
+        type='text'
+        IconStart={Icons.Globe ? Icons.Globe : Icons.User}
+        errorMessage={errors.address?.message}
+        {...register('address')}
+      />
+      <InputLabel
+        label='Bio'
+        placeHolder='Bio'
+        type='text'
+        IconStart={Icons.User}
+        errorMessage={errors.bio?.message}
+        {...register('bio')}
+      />
+      <button
+        type='submit'
+        className='mt-4 rounded bg-primary px-6 py-2 font-semibold text-white transition hover:bg-primary-dark'
+      >
+        Save
+      </button>
+    </form>
+  );
+};
+
+export default FormPersonal;

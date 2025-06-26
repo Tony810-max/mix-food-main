@@ -10,7 +10,7 @@ const Review = dynamic(() => import('./components/Review'));
 
 const LandingPage = () => {
   return (
-    <div className='mt-[3.75rem]'>
+    <div className='pt-[3.75rem]'>
       <BannerLandingPage />
       <div className='container mx-auto'>
         <BestSeller />

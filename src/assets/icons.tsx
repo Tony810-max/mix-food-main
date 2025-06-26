@@ -1,6 +1,19 @@
 import type { ForwardRefExoticComponent, RefAttributes, SVGProps } from 'react';
 
-import { Eye, EyeOff, Lock, MailIcon, ThumbsDown, ThumbsUp, User, Utensils, Phone } from 'lucide-react';
+import {
+  Calendar,
+  Eye,
+  EyeOff,
+  Globe,
+  Lock,
+  MailIcon,
+  PenLine,
+  Phone,
+  ThumbsDown,
+  ThumbsUp,
+  User,
+  Utensils,
+} from 'lucide-react';
 import file from './svg/file.svg';
 import github from './svg/github.svg';
 import globe from './svg/globe.svg';
@@ -24,6 +37,9 @@ export const IconList = {
   User,
   EyeOff,
   Phone,
+  Calendar,
+  PenLine,
+  Globe,
 };
 
 type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;

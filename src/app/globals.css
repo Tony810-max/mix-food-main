@@ -10,7 +10,7 @@
 
 .bg-primary-100 {
   --tw-bg-opacity: 1;
-  background-color: white;
+  --background-color: white;
 }
 
 @layer base {

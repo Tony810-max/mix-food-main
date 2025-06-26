@@ -4,7 +4,7 @@ import ContentLocations from './components/ContentLocations';
 
 const LocationsPage = () => {
   return (
-    <div className='mt-[4.5rem] min-h-[calc(100vh-72px)]'>
+    <div className='min-h-[calc(100vh-60px)]'>
       <HeroSection title='Location' subtitle='Find us' />
       <ContentLocations />
     </div>
