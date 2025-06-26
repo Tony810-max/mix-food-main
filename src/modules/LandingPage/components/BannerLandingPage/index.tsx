@@ -5,7 +5,7 @@ import SearchFood from './SearchFood';
 
 const BannerLandingPage = () => {
   return (
-    <div className='relative h-[calc(100vh-72px)] text-white'>
+    <div className='relative h-[calc(100vh-60px)] text-white'>
       <Image
         src='/images/landingPage/banner.webp'
         alt='banner'

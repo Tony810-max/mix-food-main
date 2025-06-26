@@ -8,7 +8,7 @@ import SwitchLocale from './components/SwitchLocale';
 
 const Header = () => {
   return (
-    <div className='fixed top-0 z-50 w-full bg-white py-3 backdrop-blur-md lg:py-[0.125rem]'>
+    <div className='fixed top-0 z-50 w-full border bg-white py-3 shadow-sm backdrop-blur-md lg:py-[0.125rem]'>
       <div className='container mx-auto flex items-center justify-between px-4'>
         <Logo className='hidden lg:flex' />
         <Sidebar />
