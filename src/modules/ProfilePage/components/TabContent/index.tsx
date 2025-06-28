@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { tabs } from '../../utils/const';
 import ChangePassword from './ChangePassword';
 import PersonalInfoForm from './PersonalInfo';
+import VerifyEmail from './VerifyEmail';
+
 const TabProfile = () => {
   const [tab, setTab] = useState<String>('personalInfo');
 
@@ -13,7 +15,7 @@ const TabProfile = () => {
       case 'changePassword':
         return <ChangePassword />;
       case 'verifyEmail':
-        return <span>verify Email content</span>;
+        return <VerifyEmail />;
       default:
         return <span>Profile content</span>;
     }

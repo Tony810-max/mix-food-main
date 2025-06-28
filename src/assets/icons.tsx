@@ -9,6 +9,7 @@ import {
   MailIcon,
   PenLine,
   Phone,
+  ShieldCheck,
   ThumbsDown,
   ThumbsUp,
   User,
@@ -42,6 +43,7 @@ export const IconList = {
   PenLine,
   Globe,
   X,
+  ShieldCheck,
 };
 
 type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
