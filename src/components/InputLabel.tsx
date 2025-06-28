@@ -11,6 +11,7 @@ interface IInputLabel {
   isIconEnd?: boolean;
   type: string;
   errorMessage?: string;
+  disable?: boolean;
 }
 
 const InputLabel: React.FC<IInputLabel> = ({
@@ -21,6 +22,7 @@ const InputLabel: React.FC<IInputLabel> = ({
   label,
   placeHolder,
   errorMessage,
+  disable = false,
   ...props
 }) => {
   const [isHidden, setIsHidden] = useState(false);
@@ -29,6 +31,7 @@ const InputLabel: React.FC<IInputLabel> = ({
   return (
     <div className='space-y-1'>
       <Input
+        disabled={disable}
         type={type === 'password' ? checkHidden : type}
         isRequired={isRequire}
         label={label}

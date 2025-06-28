@@ -13,6 +13,7 @@ import {
   ThumbsUp,
   User,
   Utensils,
+  X,
 } from 'lucide-react';
 import file from './svg/file.svg';
 import github from './svg/github.svg';
@@ -40,6 +41,7 @@ export const IconList = {
   Calendar,
   PenLine,
   Globe,
+  X,
 };
 
 type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
