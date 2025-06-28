@@ -9,7 +9,11 @@ import type { z } from 'zod';
 
 type FormData = z.infer<typeof schemaProfile>;
 
-const FormPersonal = () => {
+interface IFormPersonal {
+  isEditProfile: boolean;
+}
+
+const FormPersonal: React.FC<IFormPersonal> = ({ isEditProfile }) => {
   const {
     register,
     handleSubmit,
@@ -32,9 +36,10 @@ const FormPersonal = () => {
   };
 
   return (
-    <form className='space-y-6' onSubmit={handleSubmit(onSubmit)}>
+    <form className='grid space-y-4' onSubmit={handleSubmit(onSubmit)}>
       <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
         <InputLabel
+          disable={!isEditProfile}
           label='Full Name'
           placeHolder='John Doe'
           type='text'
@@ -43,6 +48,7 @@ const FormPersonal = () => {
           {...register('fullName')}
         />
         <InputLabel
+          disable={!isEditProfile}
           label='Email'
           placeHolder='john.doe@example.com'
           type='email'
@@ -51,6 +57,7 @@ const FormPersonal = () => {
           {...register('email')}
         />
         <InputLabel
+          disable={!isEditProfile}
           label='Phone Number'
           placeHolder='+1 (555) 123-4567'
           type='text'
@@ -59,6 +66,7 @@ const FormPersonal = () => {
           {...register('phone')}
         />
         <InputLabel
+          disable={!isEditProfile}
           label='Birthday'
           placeHolder='15/05/1990'
           type='text'
@@ -68,6 +76,7 @@ const FormPersonal = () => {
         />
       </div>
       <InputLabel
+        disable={!isEditProfile}
         label='Address'
         placeHolder='123 Main St, New York, NY 10001'
         type='text'
@@ -76,6 +85,7 @@ const FormPersonal = () => {
         {...register('address')}
       />
       <InputLabel
+        disable={!isEditProfile}
         label='Bio'
         placeHolder='Bio'
         type='text'
@@ -83,12 +93,14 @@ const FormPersonal = () => {
         errorMessage={errors.bio?.message}
         {...register('bio')}
       />
-      <button
-        type='submit'
-        className='mt-4 rounded bg-primary px-6 py-2 font-semibold text-white transition hover:bg-primary-dark'
-      >
-        Save
-      </button>
+      {isEditProfile && (
+        <button
+          type='submit'
+          className='mt-4 rounded bg-primary px-6 py-2 font-semibold text-white transition hover:bg-primary-dark'
+        >
+          Save
+        </button>
+      )}
     </form>
   );
 };

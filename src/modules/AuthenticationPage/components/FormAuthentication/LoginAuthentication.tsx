@@ -13,7 +13,6 @@ const LoginAuthentication = () => {
   } = useLoginForm();
 
   const onSubmit = (data: LoginFormValues) => {
-    console.log('🚀 ~ onSubmit ~ data:', data);
     // TODO: Replace with actual login logic
     // e.g., await loginUser(data)
     alert('Login successful!');

@@ -13,7 +13,6 @@ const RegisterAuthentication = () => {
   } = useRegisterForm();
 
   const onSubmit = (data: RegisterFormValues) => {
-    console.log('🚀 ~ onSubmit ~ data:', data);
     // TODO: Replace with actual registration logic
     // e.g., await registerUser(data)
     alert('Registration successful!');

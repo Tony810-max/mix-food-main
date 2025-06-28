@@ -38,7 +38,7 @@ const FormChangePassword = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='mx-auto max-w-md space-y-4'>
+    <form onSubmit={handleSubmit(onSubmit)} className='grid space-y-4'>
       <InputLabel
         label='Current Password'
         placeHolder='Enter your current password'
