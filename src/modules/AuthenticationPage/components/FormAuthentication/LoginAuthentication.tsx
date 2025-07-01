@@ -13,8 +13,7 @@ const LoginAuthentication = () => {
   } = useLoginForm();
 
   const onSubmit = (data: LoginFormValues) => {
-    // TODO: Replace with actual login logic
-    // e.g., await loginUser(data)
+    console.log('🚀 ~ onSubmit ~ data:', data);
     alert('Login successful!');
   };
 
@@ -43,6 +42,9 @@ const LoginAuthentication = () => {
       </div>
       <Button color='primary' fullWidth type='submit' isLoading={isSubmitting} disabled={isSubmitting}>
         Login
+      </Button>
+      <Button color='danger' startContent={<Icons.AtSign />}>
+        Login with Google
       </Button>
     </form>
   );
