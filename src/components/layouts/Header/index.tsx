@@ -1,10 +1,11 @@
 'use client';
 import React from 'react';
-import AuthActions from './components/AuthActions';
+// import AuthActions from './components/AuthActions';
 import Logo from './components/Logo';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import SwitchLocale from './components/SwitchLocale';
+import UserDropdown from './components/UserDropdown';
 
 const Header = () => {
   return (
@@ -15,9 +16,9 @@ const Header = () => {
         <div className='flex items-center gap-2 lg:gap-4'>
           <div className='hidden items-center gap-8 lg:flex'>
             <Navbar />
-            <AuthActions />
+            {/* <AuthActions /> */}
           </div>
-
+          <UserDropdown />
           <SwitchLocale />
         </div>
       </div>

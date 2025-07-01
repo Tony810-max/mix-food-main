@@ -1,5 +1,4 @@
 'use client';
-import { Avatar } from '@heroui/react';
 import React from 'react';
 
 const CardProfile = () => {
@@ -10,7 +9,9 @@ const CardProfile = () => {
   return (
     <div className='flex w-full justify-between gap-4 border px-4 py-8 shadow-lg'>
       <div className='flex w-full items-center gap-4 rounded-md'>
-        <Avatar name={nameDisplay} size='lg' color='primary' className='text-xl shadow-xl' />
+        <span className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary font-bold text-lg text-white'>
+          {nameDisplay}
+        </span>
         <div className='flex flex-col gap-1'>
           <span className='font-bold text-lg'>{name}</span>
           <span className='text-sm'>john.doe@example.com</span>
