@@ -1,6 +1,7 @@
 import type { ForwardRefExoticComponent, RefAttributes, SVGProps } from 'react';
 
 import {
+  AtSign,
   Calendar,
   ChevronDown,
   ChevronUp,
@@ -48,6 +49,7 @@ export const IconList = {
   ShieldCheck,
   ChevronDown,
   ChevronUp,
+  AtSign,
 };
 
 type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
