@@ -8,11 +8,11 @@ import { TAB_VALUES } from '../../utils/const';
 import type { RegisterFormValues } from './schema';
 import { useRegisterForm } from './useRegisterForm';
 
-interface RegisterAuthenticationProps {
+export interface IRegisterAuthenticationProps {
   setTab: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const RegisterAuthentication = ({ setTab }: RegisterAuthenticationProps) => {
+const RegisterAuthentication = ({ setTab }: IRegisterAuthenticationProps) => {
   const {
     register,
     handleSubmit,

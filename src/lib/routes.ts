@@ -8,4 +8,5 @@ export const ROUTES = {
   FACEBOOK: 'https://www.facebook.com/mixfoodamthucthai',
   AUTHENTICATION: '/authentication',
   ABOUT: '/about',
+  FORGOT_PASSWORD: '/forgot-password',
 } as const;
