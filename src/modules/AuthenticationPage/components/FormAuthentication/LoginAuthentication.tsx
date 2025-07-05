@@ -1,32 +1,60 @@
+import { useSignInMutation } from '@/api/auth/mutations';
 import { Icons } from '@/assets/icons';
 import InputLabel from '@/components/InputLabel';
+import { useAuth } from '@/hooks/useAuth';
+import { ROUTES } from '@/lib/routes';
 import { Button } from '@heroui/react';
+import { useRouter } from 'next/navigation';
 import React from 'react';
+import { toast } from 'sonner';
 import type { LoginFormValues } from './schema';
 import { useLoginForm } from './useLoginForm';
 
 const LoginAuthentication = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useLoginForm();
+  const { setUserData } = useAuth();
 
-  const onSubmit = (data: LoginFormValues) => {
-    console.log('🚀 ~ onSubmit ~ data:', data);
-    alert('Login successful!');
+  const { mutateAsync: signIn, isPending } = useSignInMutation({
+    onSuccess: (res) => {
+      const data = res?.data;
+      const user = data?.user;
+      const tokens = data?.tokens;
+
+      toast.success('Login successfully!');
+      setUserData({
+        accessToken: tokens?.accessToken,
+        refreshToken: tokens?.refreshToken,
+        user,
+      });
+      router.push(ROUTES.LANDING_PAGE);
+    },
+    onError: () => {
+      toast.error('Login failed!');
+    },
+  });
+
+  const onSubmit = async (data: LoginFormValues) => {
+    await signIn({
+      phone: data.phone,
+      password: data.password,
+    });
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-4'>
       <div>
         <InputLabel
-          type='mail'
+          type='text'
           IconStart={Icons?.User}
-          label='Email'
-          placeHolder='your@email.com'
-          {...register('email')}
-          errorMessage={errors.email?.message as string}
+          label='Phone'
+          placeHolder='Enter your phone number'
+          {...register('phone')}
+          errorMessage={errors.phone?.message as string}
         />
       </div>
       <div>
@@ -40,11 +68,8 @@ const LoginAuthentication = () => {
           errorMessage={errors.password?.message as string}
         />
       </div>
-      <Button color='primary' fullWidth type='submit' isLoading={isSubmitting} disabled={isSubmitting}>
+      <Button color='primary' fullWidth type='submit' isLoading={isPending} disabled={isPending}>
         Login
-      </Button>
-      <Button color='danger' startContent={<Icons.AtSign />}>
-        Login with Google
       </Button>
     </form>
   );

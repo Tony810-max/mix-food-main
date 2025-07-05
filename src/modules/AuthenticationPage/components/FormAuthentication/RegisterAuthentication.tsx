@@ -1,21 +1,41 @@
+import { useSignUpMutation } from '@/api/auth/mutations';
 import { Icons } from '@/assets/icons';
 import InputLabel from '@/components/InputLabel';
 import { Button } from '@heroui/react';
 import React from 'react';
+import { toast } from 'sonner';
+import { TAB_VALUES } from '../../utils/const';
 import type { RegisterFormValues } from './schema';
 import { useRegisterForm } from './useRegisterForm';
 
-const RegisterAuthentication = () => {
+interface RegisterAuthenticationProps {
+  setTab: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const RegisterAuthentication = ({ setTab }: RegisterAuthenticationProps) => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useRegisterForm();
 
-  const onSubmit = (data: RegisterFormValues) => {
-    // TODO: Replace with actual registration logic
-    // e.g., await registerUser(data)
-    alert('Registration successful!');
+  const { mutateAsync: signUp, isPending } = useSignUpMutation({
+    onSuccess: () => {
+      toast.success('Register successfully!');
+      setTab(TAB_VALUES.LOGIN);
+    },
+    onError: (error) => {
+      toast.error(error?.message || 'Register failed!');
+    },
+  });
+
+  const onSubmit = async (data: RegisterFormValues) => {
+    await signUp({
+      email: data.email,
+      phone: data.phone,
+      username: data.name,
+      password: data.password,
+    });
   };
 
   return (
@@ -72,7 +92,7 @@ const RegisterAuthentication = () => {
           errorMessage={errors.confirmPassword?.message as string}
         />
       </div>
-      <Button color='primary' fullWidth type='submit' isLoading={isSubmitting} disabled={isSubmitting}>
+      <Button disabled={isPending} color='primary' fullWidth type='submit' isLoading={isPending}>
         Register
       </Button>
     </form>

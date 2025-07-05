@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
 import { type ReactNode, useEffect, useState } from 'react';
+import { Toaster } from 'sonner';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -31,6 +32,7 @@ function Providers({ children }: ProvidersProps) {
   return (
     <HeroUIProvider>
       <QueryClientProvider client={queryClient}>
+        <Toaster position='top-right' />
         <ProgressBar height='4px' color='#fffd00' options={{ showSpinner: false }} shallowRouting />{' '}
         <>{isMounted ? children : <></>}</>
         <ReactQueryDevtools buttonPosition='bottom-left' initialIsOpen={false} />

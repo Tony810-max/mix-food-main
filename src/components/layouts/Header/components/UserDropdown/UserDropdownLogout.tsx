@@ -1,7 +1,9 @@
 import { Icons } from '@/assets/icons';
+import { useAuth } from '@/hooks/useAuth';
 import React from 'react';
 
 const UserDropdownLogout: React.FC = () => {
+  const { logout } = useAuth();
   // Use LogOut icon if available, else fallback to X
   const LogoutIcon = Icons.User || Icons.X;
   return (
@@ -9,7 +11,7 @@ const UserDropdownLogout: React.FC = () => {
       <button
         className='flex w-full items-center gap-3 rounded px-2 py-2 font-medium text-red-500 text-sm transition hover:bg-red-50'
         type='button'
-        // onClick={logoutHandler} // To be implemented
+        onClick={logout}
       >
         <LogoutIcon className='h-5 w-5' />
         Logout
