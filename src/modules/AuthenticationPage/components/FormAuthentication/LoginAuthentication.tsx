@@ -4,6 +4,7 @@ import InputLabel from '@/components/InputLabel';
 import { useAuth } from '@/hooks/useAuth';
 import { ROUTES } from '@/lib/routes';
 import { Button } from '@heroui/react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { toast } from 'sonner';
@@ -67,6 +68,11 @@ const LoginAuthentication = () => {
           {...register('password')}
           errorMessage={errors.password?.message as string}
         />
+      </div>
+      <div className='flex justify-end'>
+        <Link href={ROUTES.FORGOT_PASSWORD} className=' w-fit text-red-500 text-sm hover:opacity-70'>
+          Can't remember your password?
+        </Link>
       </div>
       <Button color='primary' fullWidth type='submit' isLoading={isPending} disabled={isPending}>
         Login
