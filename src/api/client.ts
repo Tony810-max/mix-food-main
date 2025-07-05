@@ -4,11 +4,11 @@ import { appConfig } from '@/config';
 import { errorInterceptor, requestInterceptor, successInterceptor } from './interceptors';
 
 const axiosRequestConfig: AxiosRequestConfig = {
-  baseURL: appConfig.apiUrl,
+  baseURL: appConfig.apiUrl + '/api',
   responseType: 'json',
 };
 
-const client: AxiosInstance = axios.create(axiosRequestConfig);
+export const request: AxiosInstance = axios.create(axiosRequestConfig);
 
-client.interceptors.request.use(requestInterceptor);
-client.interceptors.response.use(successInterceptor, errorInterceptor);
+request.interceptors.request.use(requestInterceptor);
+request.interceptors.response.use(successInterceptor, errorInterceptor);

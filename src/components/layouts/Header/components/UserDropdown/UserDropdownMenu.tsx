@@ -1,5 +1,5 @@
 import { Icons } from '@/assets/icons';
-import ROUTES from '@/types/routes';
+import { ROUTES } from '@/lib/routes';
 import Link from 'next/link';
 import React from 'react';
 
@@ -9,11 +9,12 @@ interface MenuItem {
   href: string;
 }
 
+// TODO: Update menu items
 const menuItems: MenuItem[] = [
-  { label: 'Profile', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.PROFILE },
-  { label: 'Order History', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.PROFILE },
-  { label: 'Favorites', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.PROFILE },
-  { label: 'Settings', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.PROFILE },
+  { label: 'Profile', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.LANDING_PAGE },
+  { label: 'Order History', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.LANDING_PAGE },
+  { label: 'Favorites', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.LANDING_PAGE },
+  { label: 'Settings', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.LANDING_PAGE },
 ];
 
 const UserDropdownMenu: React.FC = () => {

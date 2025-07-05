@@ -1,8 +1,8 @@
 'use client';
 
+import { useBookingMutation } from '@/api/book/mutations';
 import { Icons } from '@/assets/icons';
 import InputLabel from '@/components/InputLabel';
-import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -10,10 +10,12 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
+import { Button } from '@heroui/react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { format } from 'date-fns';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
 import { type BookingFormValues, bookingSchema } from '../schema';
 
 export const BookingForm = () => {
@@ -23,16 +25,32 @@ export const BookingForm = () => {
     formState: { errors },
     setValue,
     watch,
+    reset,
   } = useForm<BookingFormValues>({
     resolver: zodResolver(bookingSchema),
     mode: 'onChange',
   });
 
   const selectedDateTime = watch('datetime');
+  const { mutateAsync: book, isPending } = useBookingMutation({
+    onSuccess: () => {
+      toast.success('Booking successfully!');
+      reset();
+    },
+    onError: () => {
+      toast.error('Booking failed!');
+    },
+  });
 
-  const onSubmit = (data: BookingFormValues) => {
-    console.log(data);
-    // Handle form submission here
+  const onSubmit = async (data: BookingFormValues) => {
+    await book({
+      fullname: data.name,
+      email: data.email,
+      phoneNumber: data.phone,
+      bookingDateTime: selectedDateTime,
+      numberOfGuests: data.guests,
+      note: data.specialRequests,
+    });
   };
 
   return (
@@ -78,7 +96,7 @@ export const BookingForm = () => {
           <Popover>
             <PopoverTrigger asChild>
               <Button
-                variant={'outline'}
+                variant={'ghost'}
                 className={cn(
                   'w-full justify-start text-left font-normal',
                   !selectedDateTime && 'text-muted-foreground'
@@ -141,7 +159,7 @@ export const BookingForm = () => {
 
         <div className='grid gap-2'>
           <Label htmlFor='specialRequests' className='font-bold'>
-            Special Requests<span className='text-[#f31064]'>*</span>
+            Special Requests
           </Label>
           <Textarea
             id='specialRequests'
@@ -153,7 +171,7 @@ export const BookingForm = () => {
         </div>
       </div>
 
-      <Button type='submit' className='w-full'>
+      <Button type='submit' className='w-full' isLoading={isPending} disabled={isPending}>
         Book Table
       </Button>
     </form>

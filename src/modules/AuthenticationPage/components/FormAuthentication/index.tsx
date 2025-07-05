@@ -1,19 +1,19 @@
 'use client';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { TAB_VALUES } from '../../utils/const';
 import LoginAuthentication from './LoginAuthentication';
 import RegisterAuthentication from './RegisterAuthentication';
 
 const FormAuthentication = () => {
-  const [tab, setTab] = React.useState('login');
-  console.log('🚀 ~ FormAuthentication ~ tab:', tab);
+  const [tab, setTab] = React.useState(TAB_VALUES.LOGIN);
 
   const renderContentTab = () => {
     switch (tab) {
-      case 'login':
+      case TAB_VALUES.LOGIN:
         return <LoginAuthentication />;
-      case 'register':
-        return <RegisterAuthentication />;
+      case TAB_VALUES.REGISTER:
+        return <RegisterAuthentication setTab={setTab} />;
       default:
         return null;
     }
@@ -25,9 +25,9 @@ const FormAuthentication = () => {
         <span
           className={cn(
             'cursor-pointer rounded-lg py-1 text-center hover:opacity-50',
-            tab === 'login' && 'bg-primary text-white'
+            tab === TAB_VALUES.LOGIN && 'bg-primary text-white'
           )}
-          onClick={() => setTab('login')}
+          onClick={() => setTab(TAB_VALUES.LOGIN)}
         >
           Login
         </span>
