@@ -11,7 +11,7 @@ interface MenuItem {
 
 // TODO: Update menu items
 const menuItems: MenuItem[] = [
-  { label: 'Profile', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.LANDING_PAGE },
+  { label: 'Profile', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.PROFILE },
   { label: 'Order History', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.LANDING_PAGE },
   { label: 'Favorites', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.LANDING_PAGE },
   { label: 'Settings', icon: <Icons.User className='h-5 w-5' />, href: ROUTES?.LANDING_PAGE },

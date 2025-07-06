@@ -4,7 +4,7 @@ import TabContent from './components/TabContent';
 
 const ProfilePage = () => {
   return (
-    <div className='container mx-auto space-y-8 pt-20 pb-[calc(5rem-62px)]'>
+    <div className='container mx-auto mt-16 space-y-8 py-10'>
       <CardProfile />
       <TabContent />
     </div>
