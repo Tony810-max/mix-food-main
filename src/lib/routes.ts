@@ -9,4 +9,5 @@ export const ROUTES = {
   AUTHENTICATION: '/authentication',
   ABOUT: '/about',
   FORGOT_PASSWORD: '/forgot-password',
+  PROFILE: '/profile',
 } as const;

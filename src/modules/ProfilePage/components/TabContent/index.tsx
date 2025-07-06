@@ -21,7 +21,7 @@ const TabProfile = () => {
     }
   };
   return (
-    <div className='space-y-8'>
+    <div className='w-full space-y-8'>
       <div
         className='flex flex-nowrap justify-between overflow-x-auto rounded-md bg-[#f4f4f4] px-2 py-2 shadow-sm sm:grid sm:grid-cols-3 sm:gap-2 sm:px-4'
         style={{ WebkitOverflowScrolling: 'touch' }}
