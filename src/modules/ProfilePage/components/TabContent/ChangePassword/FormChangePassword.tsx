@@ -1,21 +1,13 @@
+import { useChangePasswordMutation } from '@/api/changePassword/mutations';
 import { Icons } from '@/assets/icons';
 import InputLabel from '@/components/InputLabel';
 import { Button } from '@heroui/react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-
-const passwordSchema = z
-  .object({
-    currentPassword: z.string().min(6, 'Current password is required and must be at least 6 characters'),
-    newPassword: z.string().min(6, 'New password must be at least 6 characters'),
-    confirmPassword: z.string().min(6, 'Please confirm your new password'),
-  })
-  .refine((data) => data.newPassword === data.confirmPassword, {
-    message: 'Passwords do not match',
-    path: ['confirmPassword'],
-  });
+import { toast } from 'sonner';
+import type { z } from 'zod';
+import { passwordSchema } from '../Types/schema';
 
 type PasswordFormData = z.infer<typeof passwordSchema>;
 
@@ -30,11 +22,21 @@ const FormChangePassword = () => {
     mode: 'onChange',
   });
 
-  const onSubmit = (data: PasswordFormData) => {
-    // Handle submit (e.g., call API)
-    // For now, just reset
-    reset();
-    alert('Password changed successfully!');
+  const { mutateAsync: changePassword, isPending } = useChangePasswordMutation({
+    onSuccess: () => {
+      toast.success('Change password successfully');
+      reset();
+    },
+    onError: (error) => {
+      toast.error(error?.message || 'Failed to change password');
+    },
+  });
+
+  const onSubmit = async (data: PasswordFormData) => {
+    await changePassword({
+      oldPassword: data.currentPassword,
+      newPassword: data.newPassword,
+    });
   };
 
   return (
@@ -69,7 +71,7 @@ const FormChangePassword = () => {
       <Button
         type='submit'
         className='w-full rounded bg-primary py-2 font-semibold text-white transition hover:bg-primary-dark'
-        isLoading={isSubmitting}
+        isLoading={isPending}
       >
         Change Password
       </Button>
