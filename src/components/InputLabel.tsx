@@ -62,7 +62,7 @@ const InputLabel: React.FC<IInputLabel> = ({
             />
           ))
         }
-        classNames={{ label: 'font-bold' }}
+        classNames={{ label: 'font-bold', input: disable && 'pointer-events-none' }}
         {...props}
       />
       {errorMessage && <p className='mt-1 font-medium text-red-500 text-xs'>{errorMessage}</p>}

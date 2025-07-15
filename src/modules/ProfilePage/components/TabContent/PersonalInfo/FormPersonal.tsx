@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 
 import { Icons } from '@/assets/icons';
 import { schemaProfile } from '@/modules/ProfilePage/utils/schema';
+import { useUserStore } from '@/stores/userStore';
 import type { z } from 'zod';
 
 type FormData = z.infer<typeof schemaProfile>;
@@ -14,6 +15,8 @@ interface IFormPersonal {
 }
 
 const FormPersonal: React.FC<IFormPersonal> = ({ isEditProfile }) => {
+  const user = useUserStore((state) => state.user);
+
   const {
     register,
     handleSubmit,
@@ -22,12 +25,12 @@ const FormPersonal: React.FC<IFormPersonal> = ({ isEditProfile }) => {
     resolver: zodResolver(schemaProfile),
     mode: 'onChange',
     defaultValues: {
-      // fullName: 'John Doe',
-      // email: 'john.doe@example.com',
-      // phone: '+1 (555) 123-4567',
-      // birthday: '15/05/1990',
-      // address: '123 Main St, New York, NY 10001',
-      // bio: 'Food enthusiast who loves trying new cuisines and sharing great dining experiences.',
+      fullName: user?.username || 'John Doe',
+      email: user?.email || 'john.doe@example.com',
+      phone: user?.phone || '+1 (555) 123-4567',
+      birthday: 'dd/mm/yyyy',
+      address: 'Your address',
+      bio: 'Food enthusiast who loves trying new cuisines and sharing great dining experiences.',
     },
   });
 
