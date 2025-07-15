@@ -9,6 +9,7 @@ import {
   EyeOff,
   Globe,
   Lock,
+  Mail,
   MailIcon,
   PenLine,
   Phone,
@@ -50,6 +51,7 @@ export const IconList = {
   ChevronDown,
   ChevronUp,
   AtSign,
+  Mail,
 };
 
 type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
