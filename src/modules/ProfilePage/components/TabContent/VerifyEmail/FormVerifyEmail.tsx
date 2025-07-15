@@ -1,13 +1,14 @@
+import { useVerifyEmailMutation, useVerifyEmailResendMutation } from '@/api/verifyEmail/mutations';
 import { Icons } from '@/assets/icons';
 import InputLabel from '@/components/InputLabel';
 import { Button } from '@heroui/react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
 import { z } from 'zod';
 
 const schema = z.object({
-  email: z.string().email('Invalid email'),
   code: z.string().min(4, 'Code is required'),
 });
 
@@ -28,6 +29,25 @@ const FormVerifyEmail = () => {
     mode: 'onChange',
   });
 
+  const { mutateAsync: verifyEmailVerify, isPending: isPendingVerify } = useVerifyEmailMutation({
+    onSuccess: () => {
+      toast.success('Verify email successfully');
+    },
+    onError: (error) => {
+      toast.error(error?.message || 'Failed to verify email');
+    },
+  });
+
+  const { mutateAsync: verifyEmailResend, isPending } = useVerifyEmailResendMutation({
+    onSuccess: () => {
+      setTimer(15);
+      toast.success('Code sent successfully');
+    },
+    onError: () => {
+      toast.error('Failed to send code');
+    },
+  });
+
   React.useEffect(() => {
     if (timer > 0) {
       timerRef.current = setTimeout(() => setTimer(timer - 1), 1000);
@@ -39,32 +59,20 @@ const FormVerifyEmail = () => {
     };
   }, [timer]);
 
-  const onGetCode = () => {
-    // Simulate API call to send code
-    setTimer(30);
-    clearErrors('code');
+  const onGetCode = async () => {
+    await verifyEmailResend();
   };
 
-  const onSubmit = (data: FormData) => {
-    // Simulate code verification
-    console.log(data);
+  const onSubmit = async (data: FormData) => {
+    await verifyEmailVerify({
+      code: data.code,
+    });
   };
 
   return (
     <form className='flex w-full flex-col gap-5' onSubmit={handleSubmit(onSubmit)}>
-      <div className='w-full'>
-        <InputLabel
-          label='Email'
-          placeHolder='Enter your email'
-          type='email'
-          IconStart={Icons.MailIcon}
-          errorMessage={errors.email?.message}
-          disable={timer > 0}
-          {...register('email')}
-        />
-      </div>
       <div className='flex w-full items-end justify-between gap-3'>
-        <div className=' w-full flex-1 items-center'>
+        <div className='w-full flex-1 items-center'>
           <InputLabel
             label='Verification Code'
             placeHolder='Enter code'
@@ -79,7 +87,8 @@ const FormVerifyEmail = () => {
             type='button'
             color='primary'
             variant='solid'
-            disabled={timer > 0}
+            isLoading={isPending}
+            disabled={isPending || timer > 0}
             onPress={onGetCode}
             className={`min-w-36 rounded-xl font-semibold text-base transition-all duration-200 ${timer > 0 ? 'pointer-events-none cursor-not-allowed bg-gray-300 text-white' : 'bg-[#8d674a] text-white hover:bg-[#a97f5d]'}`}
           >

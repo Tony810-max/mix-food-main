@@ -1,4 +1,5 @@
 import type { IUser, SignInResponse } from '@/api/auth/types';
+import { COOKIE_KEYS, removeCookies } from '@/lib/cookie';
 import { createSelectorFunctions } from 'auto-zustand-selectors-hook';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
@@ -26,12 +27,15 @@ const useBaseUserStore = create<IMeQueryStore>()(
       setUser: (data) => set((state) => ({ ...state, user: data })),
       setAccessToken: (data) => set((state) => ({ ...state, accessToken: data })),
       setRefreshToken: (data) => set((state) => ({ ...state, refreshToken: data })),
-      logout: () =>
+      logout: () => {
         set(() => ({
           accessToken: '',
           refreshToken: '',
           user: undefined,
-        })),
+        }));
+        removeCookies(COOKIE_KEYS.ACCESS_TOKEN);
+        removeCookies(COOKIE_KEYS.REFRESH_TOKEN);
+      },
     }),
     {
       name: 'user-store',

@@ -39,7 +39,7 @@ const UserDropdown: React.FC = () => {
           </span>
         </div>
         <UserDropdownHeader name={user?.name} membership={user?.membership} avatar={user?.avatar} /> */}
-        <div className='pt-1'>
+        <div className='pt-4'>
           <UserDropdownMenu />
         </div>
         <UserDropdownLogout />

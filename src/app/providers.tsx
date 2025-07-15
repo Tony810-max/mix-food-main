@@ -1,6 +1,8 @@
 'use client';
 
+import { env } from '@/utils/const';
 import { HeroUIProvider } from '@heroui/system';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
@@ -32,10 +34,12 @@ function Providers({ children }: ProvidersProps) {
   return (
     <HeroUIProvider>
       <QueryClientProvider client={queryClient}>
-        <Toaster position='top-right' />
-        <ProgressBar height='4px' color='#fffd00' options={{ showSpinner: false }} shallowRouting />{' '}
-        <>{isMounted ? children : <></>}</>
-        <ReactQueryDevtools buttonPosition='bottom-left' initialIsOpen={false} />
+        <GoogleOAuthProvider clientId={env.GOOGLE_CLIENT_ID}>
+          <Toaster position='top-right' />
+          <ProgressBar height='4px' color='#fffd00' options={{ showSpinner: false }} shallowRouting />{' '}
+          <>{isMounted ? children : <></>}</>
+          <ReactQueryDevtools buttonPosition='bottom-left' initialIsOpen={false} />
+        </GoogleOAuthProvider>
       </QueryClientProvider>
     </HeroUIProvider>
   );

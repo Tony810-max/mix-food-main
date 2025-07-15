@@ -1,4 +1,3 @@
-'use client';
 import CardProfile from './components/CardProfile';
 import TabContent from './components/TabContent';
 

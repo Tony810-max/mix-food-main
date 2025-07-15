@@ -4,6 +4,7 @@ import InputLabel from '@/components/InputLabel';
 import { useAuth } from '@/hooks/useAuth';
 import { ROUTES } from '@/lib/routes';
 import { Button } from '@heroui/react';
+import { useGoogleLogin } from '@react-oauth/google';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
@@ -23,6 +24,7 @@ const LoginAuthentication = () => {
   const { mutateAsync: signIn, isPending } = useSignInMutation({
     onSuccess: (res) => {
       const data = res?.data;
+      console.log('🚀 ~ LoginAuthentication ~ data:', data);
       const user = data?.user;
       const tokens = data?.tokens;
 
@@ -34,8 +36,8 @@ const LoginAuthentication = () => {
       });
       router.push(ROUTES.LANDING_PAGE);
     },
-    onError: () => {
-      toast.error('Login failed!');
+    onError: (err) => {
+      toast.error(err?.message || 'Login failed!');
     },
   });
 
@@ -45,6 +47,11 @@ const LoginAuthentication = () => {
       password: data.password,
     });
   };
+
+  const login = useGoogleLogin({
+    onSuccess: (codeResponse) => console.log(codeResponse),
+    flow: 'auth-code',
+  });
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-4'>
@@ -76,6 +83,9 @@ const LoginAuthentication = () => {
       </div>
       <Button color='primary' fullWidth type='submit' isLoading={isPending} disabled={isPending}>
         Login
+      </Button>
+      <Button onPress={() => login()} color='secondary' fullWidth startContent={<Icons.Mail />}>
+        Login with Google
       </Button>
     </form>
   );
