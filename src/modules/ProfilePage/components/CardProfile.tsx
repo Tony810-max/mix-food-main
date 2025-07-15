@@ -7,14 +7,12 @@ import { useUserStore } from '@/stores/userStore';
 const CardProfile = () => {
   const user = useUserStore((state) => state.user);
   const name = user?.username || 'Your Name';
-  const parts = name.split(' ');
-  const nameDisplay = parts[0][0] + parts[parts.length - 1][0];
 
   return (
     <div className='flex w-full justify-between gap-4 border px-4 py-8 shadow-lg'>
       <div className='flex w-full items-center gap-4 rounded-md'>
         <span className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary font-bold text-lg text-white'>
-          {nameDisplay}
+          {user?.username?.slice(0, 1).toUpperCase()}
         </span>
         <div className='flex flex-col gap-1'>
           <span className='font-bold text-lg'>{name}</span>
