@@ -10,8 +10,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { toast } from 'sonner';
-import type { LoginFormValues } from '../../../../../modules/AuthenticationPage/components/FormAuthentication/schema';
-import { useLoginForm } from '../../../../../modules/AuthenticationPage/components/FormAuthentication/useLoginForm';
+import type { LoginFormValues } from '../../utils/schema';
+import { useLoginForm } from '../../utils/useLoginForm';
 
 const LoginAuth = () => {
   const router = useRouter();

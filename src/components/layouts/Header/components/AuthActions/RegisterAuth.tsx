@@ -4,9 +4,9 @@ import InputLabel from '@/components/InputLabel';
 import { Button } from '@heroui/react';
 import React from 'react';
 import { toast } from 'sonner';
-import type { RegisterFormValues } from '../../../../../modules/AuthenticationPage/components/FormAuthentication/schema';
-import { useRegisterForm } from '../../../../../modules/AuthenticationPage/components/FormAuthentication/useRegisterForm';
 import { TAB_VALUES } from '../../utils/const';
+import type { RegisterFormValues } from '../../utils/schema';
+import { useRegisterForm } from '../../utils/useRegisterForm';
 
 export interface IRegisterAuthenticationProps {
   onSetTab: React.Dispatch<React.SetStateAction<string>>;
