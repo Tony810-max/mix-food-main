@@ -16,6 +16,7 @@ export const successInterceptor = (response: AxiosResponse): AxiosResponse => {
 };
 
 import { refreshTokenRequest } from '@/api/auth/requests';
+import { request } from './client';
 
 // Extend config type to allow _retry
 interface RetryAxiosRequestConfig extends InternalAxiosRequestConfig {
@@ -38,10 +39,10 @@ export const errorInterceptor = async (error: AxiosError): Promise<any> => {
       userStore.setAccessToken(accessToken);
       userStore.setRefreshToken(refreshToken);
       if (user) userStore.setUser(user);
-      // Gán lại header Authorization
+
       originalRequest.headers['Authorization'] = `Bearer ${accessToken}`;
-      // Gửi lại request gốc với token mới
-      return await (window as any).axios(originalRequest);
+
+      return request(originalRequest);
     } catch (refreshError) {
       userStore.logout();
       return Promise.reject(refreshError);

@@ -11,9 +11,7 @@ export const useCommonLocale = () => {
     startTransition(() => {
       try {
         setUserLocale(value);
-      } catch (error) {
-        console.error(error);
-      }
+      } catch (error) {}
     });
   };
 
