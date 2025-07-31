@@ -19,3 +19,9 @@ export const navData = (t: (key: string) => string): INav[] => [
     href: ROUTES?.ABOUT,
   },
 ];
+
+export const TAB_VALUES = {
+  LOGIN: 'login',
+  REGISTER: 'register',
+  FORGOT_PASSWORD: 'forgot-password',
+};

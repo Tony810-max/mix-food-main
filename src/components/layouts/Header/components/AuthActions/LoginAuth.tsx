@@ -10,10 +10,10 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { toast } from 'sonner';
-import type { LoginFormValues } from './schema';
-import { useLoginForm } from './useLoginForm';
+import type { LoginFormValues } from '../../../../../modules/AuthenticationPage/components/FormAuthentication/schema';
+import { useLoginForm } from '../../../../../modules/AuthenticationPage/components/FormAuthentication/useLoginForm';
 
-const LoginAuthentication = () => {
+const LoginAuth = () => {
   const router = useRouter();
   const {
     register,
@@ -84,4 +84,4 @@ const LoginAuthentication = () => {
   );
 };
 
-export default LoginAuthentication;
+export default LoginAuth;
