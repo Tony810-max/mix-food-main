@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #99634d;
+  --primary-color: #fed11b;
   --heroui-focus: 0 0% 100%;
   --heroui-focus-opacity: 0;
 }

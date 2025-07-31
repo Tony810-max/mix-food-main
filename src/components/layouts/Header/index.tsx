@@ -2,12 +2,12 @@
 
 import { useAuth } from '@/hooks/useAuth';
 import React from 'react';
-import AuthActions from './components/AuthActions';
 import Logo from './components/Logo';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import SwitchLocale from './components/SwitchLocale';
 import UserDropdown from './components/UserDropdown';
+import AuthActions from './components/AuthActions';
 
 const Header = () => {
   const { isLoggedIn } = useAuth();

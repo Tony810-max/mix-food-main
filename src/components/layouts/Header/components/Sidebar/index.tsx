@@ -2,9 +2,9 @@ import { Separator } from '@/components/ui/separator';
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { AlignJustify } from 'lucide-react';
 import React from 'react';
-import AuthActions from '../AuthActions';
 import Logo from '../Logo';
 import Navbar from '../Navbar';
+import AuthActions from '../AuthActions';
 
 const Sidebar = () => {
   return (

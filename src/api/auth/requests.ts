@@ -1,4 +1,5 @@
 import { env } from '@/utils/const';
+import axios from 'axios';
 import { request } from '../client';
 import type { SignInBody, SignInResponse, SignUpBody, SignUpResponse } from './types';
 
@@ -15,6 +16,10 @@ export const signInRequest = async (body: SignInBody): Promise<SignInResponse> =
 };
 
 export const refreshTokenRequest = async () => {
-  const { data } = await request.get(`/${env.API_VERSION}/auth/refresh-token`);
+  const { data } = await axios.get(`/${env.API_VERSION}/auth/refresh-token`, {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('refreshToken')}`,
+    },
+  });
   return data;
 };

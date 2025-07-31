@@ -5,14 +5,14 @@ import { Button } from '@heroui/react';
 import React from 'react';
 import { toast } from 'sonner';
 import { TAB_VALUES } from '../../utils/const';
-import type { RegisterFormValues } from './schema';
-import { useRegisterForm } from './useRegisterForm';
+import type { RegisterFormValues } from '../../utils/schema';
+import { useRegisterForm } from '../../utils/useRegisterForm';
 
 export interface IRegisterAuthenticationProps {
-  setTab: React.Dispatch<React.SetStateAction<string>>;
+  onSetTab: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const RegisterAuthentication = ({ setTab }: IRegisterAuthenticationProps) => {
+const RegisterAuth: React.FC<IRegisterAuthenticationProps> = ({ onSetTab }) => {
   const {
     register,
     handleSubmit,
@@ -21,8 +21,8 @@ const RegisterAuthentication = ({ setTab }: IRegisterAuthenticationProps) => {
 
   const { mutateAsync: signUp, isPending } = useSignUpMutation({
     onSuccess: () => {
+      onSetTab(TAB_VALUES.LOGIN);
       toast.success('Register successfully!');
-      setTab(TAB_VALUES.LOGIN);
     },
     onError: (error) => {
       toast.error(error?.message || 'Register failed!');
@@ -99,4 +99,4 @@ const RegisterAuthentication = ({ setTab }: IRegisterAuthenticationProps) => {
   );
 };
 
-export default RegisterAuthentication;
+export default RegisterAuth;
