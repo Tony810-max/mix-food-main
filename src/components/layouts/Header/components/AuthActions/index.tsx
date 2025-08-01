@@ -8,10 +8,13 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { useState } from 'react';
+import FormForgotPassword from './FormForgotPassword';
 import TabAuth from './TabAuth';
 
 const AuthActions = () => {
+  const [isActive, setIsActive] = useState<boolean>(false);
+
   const t = useTranslations('Auth');
 
   return (
@@ -24,9 +27,13 @@ const AuthActions = () => {
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Welcome to Mix Food</DialogTitle>
-          <DialogDescription>Please sign in to continue. If you don't have an account, sign up now.</DialogDescription>
+          <DialogDescription>
+            {!isActive
+              ? "Please sign in to continue. If you don't have an account, sign up now."
+              : 'If you forget your password, please enter email above to reset password'}
+          </DialogDescription>
         </DialogHeader>
-        <TabAuth />
+        {!isActive ? <TabAuth onSetActive={setIsActive} /> : <FormForgotPassword onSetActive={setIsActive} />}
       </DialogContent>
     </Dialog>
   );

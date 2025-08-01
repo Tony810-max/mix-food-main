@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 import React from 'react';
-
 const BannerLandingPage = dynamic(() => import('./components/BannerLandingPage'));
 const BestSeller = dynamic(() => import('./components/BestSeller'));
 const LastedUpdate = dynamic(() => import('./components/LastedUpdate'));
