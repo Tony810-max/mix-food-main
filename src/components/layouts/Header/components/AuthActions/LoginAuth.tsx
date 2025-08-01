@@ -6,14 +6,14 @@ import InputLabel from '@/components/InputLabel';
 import { useAuth } from '@/hooks/useAuth';
 import { ROUTES } from '@/lib/routes';
 import { Button } from '@heroui/react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { toast } from 'sonner';
 import type { LoginFormValues } from '../../utils/schema';
 import { useLoginForm } from '../../utils/useLoginForm';
+import type { IActiveAuth } from './TabAuth';
 
-const LoginAuth = () => {
+const LoginAuth: React.FC<IActiveAuth> = ({ onSetActive }) => {
   const router = useRouter();
   const {
     register,
@@ -72,11 +72,12 @@ const LoginAuth = () => {
           errorMessage={errors.password?.message as string}
         />
       </div>
-      <div className='flex justify-end'>
-        <Link href={ROUTES.FORGOT_PASSWORD} className=' w-fit text-red-500 text-sm hover:opacity-70'>
-          Can't remember your password?
-        </Link>
-      </div>
+      <p
+        onClick={() => onSetActive(true)}
+        className='w-ful text-right text-red-500 text-sm hover:cursor-pointer hover:opacity-70'
+      >
+        Can't remember your password?
+      </p>
       <Button color='primary' fullWidth type='submit' isLoading={isPending} disabled={isPending}>
         Login
       </Button>

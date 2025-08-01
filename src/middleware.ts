@@ -7,12 +7,12 @@ export function middleware(request: NextRequest) {
   const token = request.cookies.get(COOKIE_KEYS.ACCESS_TOKEN);
   const { pathname } = new URL(request.url);
 
-  if (pathname === ROUTES.AUTHENTICATION && token) {
+  if (pathname === ROUTES.BOOK && token) {
     return NextResponse.redirect(new URL(ROUTES.LANDING_PAGE, request.url));
   }
 
   if (pathname === ROUTES.PROFILE && !token) {
-    return NextResponse.redirect(new URL(ROUTES.AUTHENTICATION, request.url));
+    return NextResponse.redirect(new URL(ROUTES.LANDING_PAGE, request.url));
   }
 
   return NextResponse.next();

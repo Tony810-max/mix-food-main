@@ -3,7 +3,11 @@ import React from 'react';
 import LoginAuth from './LoginAuth';
 import RegisterAuth from './RegisterAuth';
 
-const TabAuth = () => {
+export interface IActiveAuth {
+  onSetActive: (value: boolean) => void;
+}
+
+const TabAuth: React.FC<IActiveAuth> = ({ onSetActive }) => {
   const [tab, setTab] = React.useState<string>('login');
 
   return (
@@ -17,7 +21,7 @@ const TabAuth = () => {
         </TabsTrigger>
       </TabsList>
       <TabsContent value={'login'}>
-        <LoginAuth />
+        <LoginAuth onSetActive={onSetActive} />
       </TabsContent>
       <TabsContent value={'register'}>
         <RegisterAuth onSetTab={setTab} />
