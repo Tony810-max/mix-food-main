@@ -9,7 +9,7 @@ const Review = dynamic(() => import('./components/Review'));
 
 const LandingPage = () => {
   return (
-    <div className='pt-[3.75rem]'>
+    <div>
       <BannerLandingPage />
       <div className='container mx-auto'>
         <BestSeller />
