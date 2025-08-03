@@ -5,7 +5,7 @@ import ImageFood from './ImageFood';
 
 const OurMenu = () => {
   return (
-    <div className='flex justify-between gap-4 py-16'>
+    <div className='flex flex-col justify-between gap-4 py-4 sm:py-12 md:flex-row'>
       <ContentMenu />
       <ImageFood />
     </div>

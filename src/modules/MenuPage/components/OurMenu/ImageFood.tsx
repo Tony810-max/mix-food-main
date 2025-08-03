@@ -3,7 +3,7 @@ import React from 'react';
 
 const ImageFood = () => {
   return (
-    <div className='relative flex-1'>
+    <div className='relative flex-1 max-md:min-h-60'>
       <Image
         src='/images/menuPage/goitomthailan.webp'
         alt='image food'

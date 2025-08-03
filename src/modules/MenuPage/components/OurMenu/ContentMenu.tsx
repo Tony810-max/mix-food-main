@@ -5,7 +5,7 @@ import { URL_MENU } from '../../utils/const';
 
 const ContentMenu = () => {
   return (
-    <div className='flex flex-1 flex-col gap-4'>
+    <div className='flex flex-1 flex-col gap-4 '>
       <span className='font-bold text-4xl text-primary'>Our Menu</span>
       <p>
         We carefully select the finest ingredients and honor the deep-rooted traditions of Thai cuisine—faithfully
