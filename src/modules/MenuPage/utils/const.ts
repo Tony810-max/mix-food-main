@@ -1,49 +1,46 @@
-// Thai menu categories and products mock data
+export const URL_MENU = '/menu';
 
-import type { ICardFoodProps } from '@/components/CardFood';
-
-export interface Category {
-  id: string;
-  name: string;
-}
-
-export const categories: Category[] = [
-  { id: 'curries', name: 'Curries' },
-  { id: 'noodles', name: 'Noodles' },
-  { id: 'desserts', name: 'Desserts' },
-];
-
-export const products: ICardFoodProps[] = [
+export const DATA_MENU = [
   {
-    title: 'Green Curry',
-    description: 'Classic Thai green curry with chicken, eggplant, and basil.',
-    category: 'curries',
-    img: '/images/landingPage/tomyum2.webp',
-    time: '30 minutes',
-    price: '$10',
+    img: '/images/menuPage/goitomthailan.webp',
+    title: 'Goi Tom Thai Lan',
+    category: 'Goi Tom',
+    time: '10-15 min',
+    price: '$12.99',
   },
   {
-    title: 'Green Curry',
-    description: 'Classic Thai green curry with chicken, eggplant, and basil.',
-    category: 'curries',
-    img: '/images/landingPage/tomyum2.webp',
-    time: '30 minutes',
-    price: '$10',
+    img: '/images/menuPage/goitomthailan.webp',
+    title: 'Goi Tom Thai Lan',
+    category: 'Goi Tom',
+    time: '10-15 min',
+    price: '$12.99',
   },
   {
-    title: 'Green Curry',
-    description: 'Classic Thai green curry with chicken, eggplant, and basil.',
-    category: 'curries',
-    img: '/images/landingPage/tomyum2.webp',
-    time: '30 minutes',
-    price: '$10',
+    img: '/images/menuPage/goitomthailan.webp',
+    title: 'Goi Tom Thai Lan',
+    category: 'Goi Tom',
+    time: '10-15 min',
+    price: '$12.99',
   },
   {
-    title: 'Green Curry',
-    description: 'Classic Thai green curry with chicken, eggplant, and basil.',
-    category: 'curries',
-    img: '/images/landingPage/tomyum2.webp',
-    time: '30 minutes',
-    price: '$10',
+    img: '/images/menuPage/goitomthailan.webp',
+    title: 'Goi Tom Thai Lan',
+    category: 'Goi Tom',
+    time: '10-15 min',
+    price: '$12.99',
+  },
+  {
+    img: '/images/menuPage/goitomthailan.webp',
+    title: 'Goi Tom Thai Lan',
+    category: 'Goi Tom',
+    time: '10-15 min',
+    price: '$12.99',
+  },
+  {
+    img: '/images/menuPage/goitomthailan.webp',
+    title: 'Goi Tom Thai Lan',
+    category: 'Goi Tom',
+    time: '10-15 min',
+    price: '$12.99',
   },
 ];

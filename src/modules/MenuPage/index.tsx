@@ -1,12 +1,12 @@
 import React from 'react';
-import HeroSection from '../../components/HeroSection';
-import ContentMenu from './components/ContentMenu';
+import OurMenu from './components/OurMenu';
+import RecommendDish from './components/RecommendDish';
 
 const MenuPage = () => {
   return (
-    <div>
-      <HeroSection title='Menu' subtitle='Discover our menu' />
-      <ContentMenu />
+    <div className='container mx-auto'>
+      <OurMenu />
+      <RecommendDish />
     </div>
   );
 };

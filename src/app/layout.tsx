@@ -67,7 +67,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <Header />
-            {children}
+            <main className='pt-[3.875rem]'>{children}</main>
             <Footer />
           </Providers>
         </NextIntlClientProvider>
