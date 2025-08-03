@@ -1,16 +1,17 @@
 import { Icons } from '@/assets/icons';
-import { useUserStore } from '@/stores/userStore';
 import React from 'react';
 import HeadingProfile from '../../HeadingProfile';
 import FormVerifyEmail from './FormVerifyEmail';
 import VerifyEmailSuccess from './VerifyEmailSuccess';
+import { useUser } from '@/modules/ProfilePage/hook/useUser';
 
 const VerifyEmail = () => {
-  const isVerify = useUserStore.getState().user?.isActive;
+  const { user } = useUser();
+  const isVerifyEmail = user?.isVerified;
   return (
     <div>
       <HeadingProfile onSetIsEditProfile={() => {}} title='Verify Email' Icon={Icons.ShieldCheck} isHidden={false} />
-      {isVerify ? <VerifyEmailSuccess /> : <FormVerifyEmail />}
+      {isVerifyEmail ? <VerifyEmailSuccess /> : <FormVerifyEmail />}
     </div>
   );
 };
