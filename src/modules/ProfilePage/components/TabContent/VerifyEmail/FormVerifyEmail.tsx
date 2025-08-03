@@ -1,6 +1,7 @@
 import { useVerifyEmailMutation, useVerifyEmailResendMutation } from '@/api/verifyEmail/mutations';
 import { Icons } from '@/assets/icons';
 import InputLabel from '@/components/InputLabel';
+import { useUser } from '@/modules/ProfilePage/hook/useUser';
 import { Button } from '@heroui/react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import React, { useRef, useState } from 'react';
@@ -16,6 +17,7 @@ type FormData = z.infer<typeof schema>;
 
 const FormVerifyEmail = () => {
   const [timer, setTimer] = useState(0);
+  const { refetch } = useUser();
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const {
@@ -32,6 +34,7 @@ const FormVerifyEmail = () => {
   const { mutateAsync: verifyEmailVerify, isPending: isPendingVerify } = useVerifyEmailMutation({
     onSuccess: () => {
       toast.success('Verify email successfully');
+      refetch();
     },
     onError: (error) => {
       toast.error(error?.message || 'Failed to verify email');
