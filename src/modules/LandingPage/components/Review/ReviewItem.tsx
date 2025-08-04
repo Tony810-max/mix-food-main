@@ -1,45 +1,30 @@
 'use client';
-
-import { motion } from 'framer-motion';
-import type { FC, HTMLAttributes } from 'react';
-import { Rating } from 'react-simple-star-rating';
+import { Card, CardContent } from '@/components/ui/card';
+import { Star } from 'lucide-react';
+import type { FC } from 'react';
 import type { IReview } from '../../utils/types';
-import DislikeButton from './DislikeButton';
-import LikeButton from './LikeButton';
 
-export interface ReviewItemProps extends Pick<HTMLAttributes<HTMLDivElement>, 'className'>, IReview {
-  index: number;
-}
-
-const ReviewItem: FC<ReviewItemProps> = ({ name, date, rating, review, index }) => {
+const ReviewItem: FC<IReview> = ({ name, date, rating, review }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, translateX: -50 }}
-      whileInView={{ opacity: 1, translateX: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3, delay: 0 + index * 0.2 }}
-      className='space-y-3'
-    >
-      <div>
-        <p className='font-medium text-base capitalize'>{name}</p>
-        <p className='font-normal text-primary text-sm'>{date}</p>
-      </div>
-      <Rating initialValue={rating} readonly />
-      <p className='font-medium text-base'>{review}</p>
-
-      {/* Actions like and dislike */}
-      <div className='flex items-center gap-4'>
-        <div className='flex items-center gap-2'>
-          <LikeButton />
-          <span className='text-primary'>2</span>
+    <Card className='p-6'>
+      <CardContent className='p-0'>
+        <div className='mb-4 flex items-center space-x-1'>
+          {[...Array(rating)].map((_, i) => (
+            <Star key={i} className='h-4 w-4 fill-[#fed11b] text-[#fed11b]' />
+          ))}
         </div>
-
-        <div className='flex items-center gap-2'>
-          <DislikeButton />
-          <span className='text-primary'>2</span>
+        <p className='mb-4 text-gray-600'>{review} </p>
+        <div className='flex items-center space-x-3'>
+          <div className='flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-[#fed11b] to-amber-500 font-medium text-gray-900'>
+            {name?.charAt(0).toUpperCase()}
+          </div>
+          <div>
+            <p className='font-medium'>{name}</p>
+            <p className='text-gray-500 text-sm'>{date}</p>
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </CardContent>
+    </Card>
   );
 };
 
