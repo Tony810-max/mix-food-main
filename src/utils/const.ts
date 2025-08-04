@@ -1,3 +1,4 @@
+import { ROUTES } from '@/lib/routes';
 import type { FC, PropsWithChildren } from 'react';
 
 export const COOKIE_KEYS = {
@@ -14,3 +15,6 @@ export const env = {
   FACEBOOK_URL: process.env.NEXT_PUBLIC_FACEBOOK_URL!,
   GOOGLE_CLIENT_ID: process.env.NEXT_PUBLIC_CLIENT_ID!,
 };
+
+export const publicRoutes: string[] = [ROUTES.LANDING_PAGE, ROUTES.BOOK, ROUTES.MENU];
+export const privateRoutes: string[] = [ROUTES.PROFILE];

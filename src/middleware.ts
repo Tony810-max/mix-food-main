@@ -1,18 +1,25 @@
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 import { COOKIE_KEYS } from './lib/cookie';
-import { ROUTES } from './lib/routes';
+import { privateRoutes, publicRoutes } from './utils/const';
 
 export function middleware(request: NextRequest) {
   const token = request.cookies.get(COOKIE_KEYS.ACCESS_TOKEN);
   const { pathname } = new URL(request.url);
 
-  if (pathname === ROUTES.BOOK && token) {
-    return NextResponse.redirect(new URL(ROUTES.LANDING_PAGE, request.url));
+  const isPublic = publicRoutes.includes(pathname);
+  const isPrivate = privateRoutes.includes(pathname);
+
+  if (isPrivate && !token) {
+    return NextResponse.redirect(new URL('/', request.url));
   }
 
-  if (pathname === ROUTES.PROFILE && !token) {
-    return NextResponse.redirect(new URL(ROUTES.LANDING_PAGE, request.url));
+  if (isPublic) {
+    return NextResponse.next();
+  }
+
+  if (isPrivate && token) {
+    return NextResponse.next();
   }
 
   return NextResponse.next();
