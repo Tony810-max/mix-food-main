@@ -2,9 +2,9 @@
 
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import { Clock } from 'lucide-react';
 import Image from 'next/image';
 import type { FC, HTMLAttributes } from 'react';
+import { Badge } from './ui/badge';
 
 export interface ICardFoodProps extends Pick<HTMLAttributes<HTMLDivElement>, 'className' | 'onClick'> {
   index?: number;
@@ -12,8 +12,8 @@ export interface ICardFoodProps extends Pick<HTMLAttributes<HTMLDivElement>, 'cl
   title: string;
   description?: string;
   category: string;
-  time: string;
   price: string;
+  isBestSeller: boolean;
 }
 
 const CardFood: FC<ICardFoodProps> = ({
@@ -23,7 +23,7 @@ const CardFood: FC<ICardFoodProps> = ({
   className,
   index,
   category,
-  time,
+  isBestSeller,
   price,
   ...props
 }) => {
@@ -40,9 +40,9 @@ const CardFood: FC<ICardFoodProps> = ({
       {...props}
     >
       <div className='relative aspect-[3/2] overflow-hidden rounded-lg'>
-        <span className='absolute top-2 left-2 z-10 rounded-full bg-green-100 px-2 py-0.5 font-medium text-green-700 text-xs backdrop-blur-sm'>
+        <Badge variant={'secondary'} className='absolute top-2 left-2 z-10 text-black'>
           {category}
-        </span>
+        </Badge>
         <Image
           src={img}
           alt='food'
@@ -53,14 +53,12 @@ const CardFood: FC<ICardFoodProps> = ({
         />
       </div>
       <div className='flex flex-col gap-1'>
-        <span className='line-clamp-1 font-semibold text-gray-900 text-lg'>{title}</span>
-        {description && <span className='line-clamp-3 text-gray-600 text-sm'>{description}</span>}
-        <div className='mt-2 flex items-center justify-between'>
-          <span className='flex items-center gap-1 text-gray-500 text-xs'>
-            <Clock className='h-3.5 w-3.5' /> {time}
-          </span>
-          <span className='font-bold text-base text-red-600'>{price}</span>
+        <div className='flex items-center justify-between'>
+          <span className='line-clamp-1 font-semibold text-gray-900 text-lg'>{title}</span>
+          {isBestSeller && <Badge>Best Seller</Badge>}
         </div>
+        {description && <span className='line-clamp-3 text-gray-600 text-sm'>{description}</span>}
+        <span className='text-right font-bold text-base text-red-600'>{price}</span>
       </div>
     </motion.div>
   );

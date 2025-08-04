@@ -4,8 +4,8 @@ export interface IFeature {
   title: string;
   description: string;
   category: string;
-  time: string;
   price: string;
+  isBestSeller: boolean;
 }
 
 export interface IReview {

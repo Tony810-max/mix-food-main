@@ -7,8 +7,8 @@ export const getDataFeature = (t: (key: string) => string): IFeature[] => [
     title: t('nameFoodPadGai'),
     description: t('descFeaturePadGai'),
     category: 'mon chinh',
-    time: '30 minutes',
     price: '$10',
+    isBestSeller: true,
   },
   {
     id: 2,
@@ -16,8 +16,8 @@ export const getDataFeature = (t: (key: string) => string): IFeature[] => [
     title: t('nameTomyum'),
     description: t('descFeatureTomyum'),
     category: 'mon chinh',
-    time: '30 minutes',
     price: '$10',
+    isBestSeller: true,
   },
   {
     id: 3,
@@ -25,8 +25,8 @@ export const getDataFeature = (t: (key: string) => string): IFeature[] => [
     title: t('namePad'),
     description: t('descFeaturePadThai'),
     category: 'mon chinh',
-    time: '30 minutes',
     price: '$10',
+    isBestSeller: true,
   },
   {
     id: 4,
@@ -34,8 +34,8 @@ export const getDataFeature = (t: (key: string) => string): IFeature[] => [
     title: t('nameSonTam'),
     description: t('descFeatureSomTum'),
     category: 'mon chinh',
-    time: '30 minutes',
     price: '$10',
+    isBestSeller: true,
   },
 ];
 
@@ -46,8 +46,8 @@ export const getDataPopular = (t: (key: string) => string): IFeature[] => [
     title: t('nameTomyum'),
     description: t('descTomyum'),
     category: 'mon chinh',
-    time: '30 minutes',
     price: '$10',
+    isBestSeller: false,
   },
   {
     id: 2,
@@ -55,8 +55,8 @@ export const getDataPopular = (t: (key: string) => string): IFeature[] => [
     title: t('namePad'),
     description: t('descPad'),
     category: 'mon chinh',
-    time: '30 minutes',
     price: '$10',
+    isBestSeller: true,
   },
   {
     id: 3,
@@ -64,8 +64,8 @@ export const getDataPopular = (t: (key: string) => string): IFeature[] => [
     title: t('nameCurry'),
     description: t('descCurry'),
     category: 'mon chinh',
-    time: '30 minutes',
     price: '$10',
+    isBestSeller: false,
   },
   {
     id: 4,
@@ -73,7 +73,7 @@ export const getDataPopular = (t: (key: string) => string): IFeature[] => [
     title: t('nameMangoDesert'),
     description: t('descDessert'),
     category: 'mon chinh',
-    time: '30 minutes',
     price: '$10',
+    isBestSeller: true,
   },
 ];
