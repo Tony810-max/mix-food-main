@@ -6,6 +6,7 @@ const LastedUpdate = dynamic(() => import('./components/LastedUpdate'));
 const Popular = dynamic(() => import('./components/Popular'));
 const PopularFood = dynamic(() => import('./components/PopularFood'));
 const Review = dynamic(() => import('./components/Review'));
+const About = dynamic(() => import('./components/About'));
 
 const LandingPage = () => {
   return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
       <div className='container mx-auto'>
         <BestSeller />
         <Popular />
+        <About />
         <Review />
         <PopularFood />
         <LastedUpdate />
