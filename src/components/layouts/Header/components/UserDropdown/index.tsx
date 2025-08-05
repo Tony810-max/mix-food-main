@@ -10,6 +10,7 @@ import UserDropdownMenu from './UserDropdownMenu';
 const UserDropdown: React.FC = () => {
   const [open, setOpen] = React.useState(false);
   const { user } = useAuth();
+  console.log('🚀 ~ UserDropdown ~ user:', user);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
