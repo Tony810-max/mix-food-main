@@ -37,7 +37,6 @@ const LoginAuth: React.FC<IActiveAuth> = ({ onSetActive }) => {
       router.push(ROUTES.LANDING_PAGE);
     },
     onError: (err: any) => {
-      console.log('🚀 ~ LoginAuthentication ~ err:', err);
       toast.error(err?.message || 'Login failed!');
     },
   });
