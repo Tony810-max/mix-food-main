@@ -18,7 +18,7 @@ const SearchFood = () => {
           />
         }
         endContent={
-          <Button radius='lg' className='absolute top-1 right-2 bg-[#ed6626] font-bold text-white'>
+          <Button radius='lg' className='absolute top-1 right-2 bg-primary font-bold text-white'>
             {t('find-food')}
           </Button>
         }
