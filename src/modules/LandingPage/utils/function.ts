@@ -8,7 +8,7 @@ export const getDataFeature = (t: (key: string) => string): IFeature[] => [
     description: t('descFeaturePadGai'),
     category: 'mon chinh',
     time: '30 minutes',
-    price: '$10',
+    price: 100000,
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const getDataFeature = (t: (key: string) => string): IFeature[] => [
     description: t('descFeatureTomyum'),
     category: 'mon chinh',
     time: '30 minutes',
-    price: '$10',
+    price: 100000,
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const getDataFeature = (t: (key: string) => string): IFeature[] => [
     description: t('descFeaturePadThai'),
     category: 'mon chinh',
     time: '30 minutes',
-    price: '$10',
+    price: 100000,
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const getDataFeature = (t: (key: string) => string): IFeature[] => [
     description: t('descFeatureSomTum'),
     category: 'mon chinh',
     time: '30 minutes',
-    price: '$10',
+    price: 100000,
   },
 ];
 
@@ -47,7 +47,7 @@ export const getDataPopular = (t: (key: string) => string): IFeature[] => [
     description: t('descTomyum'),
     category: 'mon chinh',
     time: '30 minutes',
-    price: '$10',
+    price: 100000,
   },
   {
     id: 2,
@@ -56,7 +56,7 @@ export const getDataPopular = (t: (key: string) => string): IFeature[] => [
     description: t('descPad'),
     category: 'mon chinh',
     time: '30 minutes',
-    price: '$10',
+    price: 100000,
   },
   {
     id: 3,
@@ -65,7 +65,7 @@ export const getDataPopular = (t: (key: string) => string): IFeature[] => [
     description: t('descCurry'),
     category: 'mon chinh',
     time: '30 minutes',
-    price: '$10',
+    price: 100000,
   },
   {
     id: 4,
@@ -74,6 +74,6 @@ export const getDataPopular = (t: (key: string) => string): IFeature[] => [
     description: t('descDessert'),
     category: 'mon chinh',
     time: '30 minutes',
-    price: '$10',
+    price: 100000,
   },
 ];
