@@ -9,9 +9,9 @@ const BestSeller = () => {
   const dataFeature = getDataFeature(t);
 
   return (
-    <div className='p-paddingYSection'>
-      <Heading title='Best seller' />
-      <div className='grid grid-cols-2 gap-3 lg:grid-cols-4'>
+    <div className='py-20'>
+      <Heading title='Best seller' description='Khám phá những món ăn đặc sắc nhất của ẩm thực Thái Lan' />
+      <div className='grid grid-cols-3 gap-4'>
         {dataFeature?.map((feature, index) => (
           <CardFood index={index} key={feature?.id} {...feature} />
         ))}
