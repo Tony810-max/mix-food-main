@@ -4,7 +4,11 @@
 
 :root {
   --primary: 35 85% 50%;
+  --thai-gold: 45 95% 65%;
+  --thai-red: 5 75% 45%;
   --primary-color: hsl(var(--primary));
+  --background-gradient: linear-gradient(135deg, hsl(var(--thai-gold)), hsl(var(--thai-red)));
+  /* --background-gradient: black; */
   --heroui-focus: 0 0% 100%;
   --heroui-focus-opacity: 0;
 }
