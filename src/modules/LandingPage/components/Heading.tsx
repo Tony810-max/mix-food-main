@@ -1,19 +1,13 @@
 'use client';
 import type { IHeading } from '@/types/common';
-import { motion } from 'framer-motion';
 import React from 'react';
 
-const Heading: React.FC<IHeading> = ({ title }) => {
+const Heading: React.FC<IHeading> = ({ title, description }) => {
   return (
-    <motion.span
-      initial={{ x: -20 }}
-      whileInView={{ x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className='inline-block py-3 font-bold text-2xl'
-    >
-      {title}
-    </motion.span>
+    <div className='mb-16 flex flex-col items-center justify-center '>
+      <h2 className='font-bold text-4xl'>{title}</h2>
+      <p className='text-center text-xl'>{description}</p>
+    </div>
   );
 };
 

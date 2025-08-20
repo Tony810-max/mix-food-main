@@ -1,7 +1,8 @@
 'use client';
-import { Clock } from 'lucide-react';
 import Image from 'next/image';
 import type { FC } from 'react';
+import { MotionEffect } from './animate-ui/effects/motion-effect';
+import { Badge } from './ui/badge';
 
 export interface ICardFoodProps {
   index?: number;
@@ -9,21 +10,10 @@ export interface ICardFoodProps {
   title: string;
   description?: string;
   category: string;
-  time: string;
-  price: string;
+  price: string | number;
 }
 
-const CardFood: FC<ICardFoodProps> = ({
-  description,
-  img,
-  title,
-  className,
-  index,
-  category,
-  time,
-  price,
-  ...props
-}) => {
+const CardFood: FC<ICardFoodProps> = ({ description, img, title, index, category, price }) => {
   return (
     <MotionEffect
       slide={{
@@ -31,10 +21,10 @@ const CardFood: FC<ICardFoodProps> = ({
       }}
       fade
       inView
-      delay={0.5 + (index || 0.1) * 0.1}
-      className='space-y-2'
+      delay={(index || 0.1) * 0.5}
+      className='space-y-2 overflow-hidden rounded-lg shadow-lg'
     >
-      <div className='relative aspect-[3/2] overflow-hidden rounded-lg'>
+      <div className='relative aspect-[3/2]'>
         <Badge variant={'secondary'} className='absolute top-2 left-2 z-10 text-black'>
           {category}
         </Badge>
@@ -47,15 +37,12 @@ const CardFood: FC<ICardFoodProps> = ({
           className='object-cover transition-transform duration-300 group-hover:scale-105'
         />
       </div>
-      <div className='flex flex-col gap-1'>
-        <span className='line-clamp-1 font-semibold text-gray-900 text-lg'>{title}</span>
-        {description && <span className='line-clamp-3 text-gray-600 text-sm'>{description}</span>}
-        <div className='mt-2 flex items-center justify-between'>
-          <span className='flex items-center gap-1 text-gray-500 text-xs'>
-            <Clock className='h-3.5 w-3.5' /> {time}
-          </span>
-          <span className='font-bold text-base text-red-600'>{price}</span>
-        </div>
+      <div className='flex flex-col gap-2 p-4'>
+        <span className='gray-900 font-bold text-2xl '>{title}</span>
+        {description && <span className='line-clamp-1 text-gray-600 text-sm'>{description}</span>}
+        <span className='font-bold text-primary text-xl'>
+          {Number(price).toLocaleString('vi', { style: 'currency', currency: 'VND' })}
+        </span>
       </div>
     </MotionEffect>
   );

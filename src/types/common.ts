@@ -2,6 +2,7 @@ import type { LucideIcon } from 'lucide-react';
 
 export interface IHeading {
   title: string;
+  description: string;
 }
 
 export interface IIconLabel {
