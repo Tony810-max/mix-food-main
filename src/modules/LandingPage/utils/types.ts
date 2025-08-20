@@ -5,7 +5,7 @@ export interface IFeature {
   description: string;
   category: string;
   time: string;
-  price: string | number;
+  price: string;
 }
 
 export interface IReview {
