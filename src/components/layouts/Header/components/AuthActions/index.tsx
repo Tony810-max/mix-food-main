@@ -20,7 +20,7 @@ const AuthActions = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant='outline' className='rounded-full bg-primary'>
+        <Button variant='outline' className='rounded-full bg-gradient text-white'>
           {t('auth')}
         </Button>
       </DialogTrigger>

@@ -28,6 +28,9 @@ const config: Config = {
       },
     },
     extend: {
+      backgroundImage: {
+        gradient: 'var(--background-gradient)',
+      },
       padding: {
         paddingSection: 'var(--padding-section)',
       },

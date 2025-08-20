@@ -6,8 +6,8 @@ const Heading = () => {
 
   return (
     <div className='flex flex-col gap-2'>
-      <span className='font-bold text-3xl max-sm:text-center sm:text-4xl md:text-5xl'>{t('title-banner')}</span>
-      <span className='text-sm max-sm:text-center md:text-base'>{t('descr-banner')}</span>
+      <span className='text-center font-bold text-5xl max-sm:text-center sm:text-4xl md:text-7xl'>Mix Food</span>
+      <p className='max-w-2xl text-center text-xl max-sm:text-center'>{t('descr-banner')}</p>
     </div>
   );
 };

@@ -1,24 +1,25 @@
 import Image from 'next/image';
 import React from 'react';
+import ButtonsFood from './ButtonsFood';
 import HeadingBanner from './HeadingBanner';
-import SearchFood from './SearchFood';
 
 const BannerLandingPage = () => {
   return (
     <div className='relative h-[calc(100vh-60px)] text-white'>
+      <div className='absolute inset-0 z-20 bg-black/50'></div>
       <Image
-        src='/images/landingPage/banner.webp'
+        src='/images/landingPage/banner.jpg'
         alt='banner'
         fill
         priority
         unoptimized
-        className='z-0 object-cover'
+        className='z-10 object-cover'
       />
 
-      <div className='container relative z-10 mx-auto flex h-full flex-col items-center justify-center md:items-end md:justify-end'>
+      <div className=' container relative z-30 flex h-full items-center justify-center'>
         <div className='space-y-8 pb-11'>
           <HeadingBanner />
-          <SearchFood />
+          <ButtonsFood />
         </div>
       </div>
     </div>
