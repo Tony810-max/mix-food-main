@@ -1,12 +1,9 @@
 'use client';
-
-import clsx from 'clsx';
-import { motion } from 'framer-motion';
 import { Clock } from 'lucide-react';
 import Image from 'next/image';
-import type { FC, HTMLAttributes } from 'react';
+import type { FC } from 'react';
 
-export interface ICardFoodProps extends Pick<HTMLAttributes<HTMLDivElement>, 'className' | 'onClick'> {
+export interface ICardFoodProps {
   index?: number;
   img: string;
   title: string;
@@ -28,21 +25,19 @@ const CardFood: FC<ICardFoodProps> = ({
   ...props
 }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3, delay: 0 + (index || 1) * 0.3 }}
-      className={clsx(
-        'group hover:-translate-y-1 space-y-3 rounded-xl bg-white p-3 shadow-md transition-transform duration-300 hover:shadow-lg',
-        className
-      )}
-      {...props}
+    <MotionEffect
+      slide={{
+        direction: 'left',
+      }}
+      fade
+      inView
+      delay={0.5 + (index || 0.1) * 0.1}
+      className='space-y-2'
     >
       <div className='relative aspect-[3/2] overflow-hidden rounded-lg'>
-        <span className='absolute top-2 left-2 z-10 rounded-full bg-green-100 px-2 py-0.5 font-medium text-green-700 text-xs backdrop-blur-sm'>
+        <Badge variant={'secondary'} className='absolute top-2 left-2 z-10 text-black'>
           {category}
-        </span>
+        </Badge>
         <Image
           src={img}
           alt='food'
@@ -62,7 +57,7 @@ const CardFood: FC<ICardFoodProps> = ({
           <span className='font-bold text-base text-red-600'>{price}</span>
         </div>
       </div>
-    </motion.div>
+    </MotionEffect>
   );
 };
 
