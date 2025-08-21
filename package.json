@@ -43,6 +43,7 @@
     "next-intl": "^3.26.5",
     "next-nprogress-bar": "^2.4.7",
     "nookies": "^2.5.2",
+    "radix-ui": "^1.4.3",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-day-picker": "^9.7.0",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
