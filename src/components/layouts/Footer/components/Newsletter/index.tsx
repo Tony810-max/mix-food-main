@@ -11,7 +11,7 @@ const Newsletter = () => {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
-      <Heading title='Newsletter' />
+      <Heading title='Newsletter' description='' />
       <span className='text-white'>Subscribe to get the latest updates and promotions.</span>
       <FormNewsLetter />
     </motion.div>

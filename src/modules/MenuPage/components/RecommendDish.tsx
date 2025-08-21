@@ -9,14 +9,7 @@ const RecommendDish = () => {
       <span className='font-semibold text-3xl text-primary'>Recommend Dish</span>
       <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
         {DATA_MENU.map((item, index) => (
-          <CardFood
-            key={index}
-            img={item.img}
-            title={item.title}
-            category={item.category}
-            time={item.time}
-            price={item.price}
-          />
+          <CardFood key={index} {...item} />
         ))}
       </div>
     </div>

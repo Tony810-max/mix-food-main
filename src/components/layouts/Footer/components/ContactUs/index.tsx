@@ -16,7 +16,7 @@ const ContactUs = () => {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
-      <Heading title='Contact Us' />
+      <Heading title='Contact Us' description='' />
       <div className='space-y-4'>
         <IconLabel Icon={MapPin} label={t('address')} />
         <IconLabel Icon={Phone} label='(+84)905.47.37.28' />
