@@ -9,7 +9,7 @@ const Review = () => {
   const t = useTranslations('HomePage');
   return (
     <div className='space-y-4 p-paddingYSection px-4 py-paddingSection lg:px-0'>
-      <Heading title={t('customer-review')} />
+      <Heading title={t('customer-review')} description='' />
       <Carousel
         opts={{
           loop: true,

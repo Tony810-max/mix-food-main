@@ -12,7 +12,7 @@ const About = () => {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
-      <Heading title='Mix Food' />
+      <Heading title='Mix Food' description='' />
       <p className='text-white'>{t('des')}</p>
     </motion.div>
   );
