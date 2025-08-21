@@ -1,4 +1,4 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsContents, TabsList, TabsTrigger } from '@/components/animate-ui/radix/tabs';
 import React from 'react';
 import LoginAuth from './LoginAuth';
 import RegisterAuth from './RegisterAuth';
@@ -20,12 +20,14 @@ const TabAuth: React.FC<IActiveAuth> = ({ onSetActive }) => {
           Sign Up
         </TabsTrigger>
       </TabsList>
-      <TabsContent value={'login'}>
-        <LoginAuth onSetActive={onSetActive} />
-      </TabsContent>
-      <TabsContent value={'register'}>
-        <RegisterAuth onSetTab={setTab} />
-      </TabsContent>
+      <TabsContents>
+        <TabsContent value={'login'}>
+          <LoginAuth onSetActive={onSetActive} />
+        </TabsContent>
+        <TabsContent value={'register'}>
+          <RegisterAuth onSetTab={setTab} />
+        </TabsContent>
+      </TabsContents>
     </Tabs>
   );
 };
