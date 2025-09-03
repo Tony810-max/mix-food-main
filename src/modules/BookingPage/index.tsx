@@ -1,14 +1,13 @@
 import React from 'react';
-import { BookingForm } from './components/BookingForm';
+import CardBooking from './components/CardBooking';
+import InfomationBooking from './components/InfomationBooking';
 
 const BookingPage = () => {
   return (
-    <div className='flex min-h-screen items-center bg-gradient-to-br from-gray-50 to-white'>
-      <div className='container mx-auto'>
-        <div className='mx-auto max-w-4xl rounded-lg bg-white p-8 shadow-lg'>
-          <h1 className='mb-8 text-center font-bold text-3xl text-primary'>Book Your Table</h1>
-          <BookingForm />
-        </div>
+    <div className='flex min-h-[calc(100vh-61.6px)] items-center px-4 py-2'>
+      <div className='flex w-full flex-col justify-center gap-5 sm:flex-row'>
+        <CardBooking />
+        <InfomationBooking />
       </div>
     </div>
   );
