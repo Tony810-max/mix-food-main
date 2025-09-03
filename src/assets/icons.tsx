@@ -5,6 +5,7 @@ import {
   Calendar,
   ChevronDown,
   ChevronUp,
+  Clock,
   Eye,
   EyeOff,
   Globe,
@@ -13,7 +14,9 @@ import {
   MailIcon,
   PenLine,
   Phone,
+  ReceiptText,
   ShieldCheck,
+  Smartphone,
   ThumbsDown,
   ThumbsUp,
   User,
@@ -52,6 +55,9 @@ export const IconList = {
   ChevronUp,
   AtSign,
   Mail,
+  Smartphone,
+  Clock,
+  ReceiptText,
 };
 
 type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;

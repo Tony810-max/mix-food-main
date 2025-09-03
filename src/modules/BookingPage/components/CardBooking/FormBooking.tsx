@@ -16,9 +16,9 @@ import { format } from 'date-fns';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
-import { type BookingFormValues, bookingSchema } from '../schema';
+import { type BookingFormValues, bookingSchema } from '../../schema';
 
-export const BookingForm = () => {
+export const FormBooking = () => {
   const {
     register,
     handleSubmit,
