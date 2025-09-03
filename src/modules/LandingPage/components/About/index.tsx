@@ -4,8 +4,8 @@ import ImageAbout from './components/ImageAbout';
 
 const About = () => {
   return (
-    <div className='py-paddingSection'>
-      <div className='flex flex-col items-center justify-between gap-4 bg-[#fffceb] px-4 py-20 lg:flex-row'>
+    <div className='bg-gradient py-paddingSection'>
+      <div className='flex flex-col items-center justify-between gap-4 px-4 py-20 lg:flex-row'>
         <Content />
         <ImageAbout />
       </div>
