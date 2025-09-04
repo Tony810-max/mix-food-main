@@ -2,8 +2,10 @@
 import { env } from '@/utils/const';
 import { motion } from 'framer-motion';
 import { Facebook } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { URL_BANNER_ABOUT } from '../modules/utils/const';
 
 interface HeroSectionProps {
   title: string;
@@ -17,8 +19,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, subtitle }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className='relative h-96 bg-primary pt-[72px]'
+      className='relative h-[28.125rem] pt-[72px]'
     >
+      <Image src={URL_BANNER_ABOUT} alt='food' className='object-fill' fill priority unoptimized />
       <div className='absolute inset-0 bg-black/40'></div>
       <div className='container relative mx-auto flex h-full flex-col items-center justify-center px-4 text-white'>
         <motion.h1

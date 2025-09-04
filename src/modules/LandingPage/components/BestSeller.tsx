@@ -10,11 +10,13 @@ const BestSeller = () => {
 
   return (
     <div className='py-20'>
-      <Heading title='Best seller' description='Khám phá những món ăn đặc sắc nhất của ẩm thực Thái Lan' />
-      <div className='grid grid-cols-3 gap-4'>
-        {dataFeature?.map((feature, index) => (
-          <CardFood index={index} key={feature?.id} {...feature} />
-        ))}
+      <div className='container mx-auto'>
+        <Heading title='Best seller' description='Khám phá những món ăn đặc sắc nhất của ẩm thực Thái Lan' />
+        <div className='grid grid-cols-3 gap-4'>
+          {dataFeature?.map((feature, index) => (
+            <CardFood index={index} key={feature?.id} {...feature} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 'use client';
-import { motion } from 'framer-motion';
+import { URL_RESTAURANT_ABOUT } from '@/modules/utils/const';
+import Image from 'next/image';
 import React from 'react';
 
 interface AboutSectionProps {
@@ -9,78 +10,36 @@ interface AboutSectionProps {
 
 const AboutSection: React.FC<AboutSectionProps> = ({ story, specialties }) => {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className='container mx-auto px-4 py-16'
-    >
-      <div className='mx-auto max-w-4xl'>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className='mb-8 text-center font-bold text-4xl'
-        >
-          About Mix Food
-        </motion.h2>
-        <div className='grid gap-8 md:grid-cols-2'>
-          <div>
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className='mb-4 font-semibold text-2xl'
-            >
-              Our Story
-            </motion.h3>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className='mb-4'
-            >
-              {story}
-            </motion.p>
-          </div>
-          <div>
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className='mb-4 font-semibold text-2xl'
-            >
-              Our Specialties
-            </motion.h3>
-            <motion.ul
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className='space-y-4'
-            >
-              {specialties.map((specialty, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.15 + 0.7 }}
-                  className='flex items-center gap-2'
-                >
-                  <span className='flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white'>•</span>
-                  <span>{specialty}</span>
-                </motion.li>
-              ))}
-            </motion.ul>
-          </div>
+    <div className='container mx-auto py-10'>
+      <div className='grid gap-6 lg:grid-cols-2'>
+        <div className='space-y-6'>
+          <h1 className='font-bold text-4xl'>Câu chuyện của chúng tôi</h1>
+          <p className='text-justify text-gray-500 text-lg'>
+            Mix Food được thành lập vào năm 2019 với niềm đam mê mang đến hương vị Thái Lan đích thực cho người Việt
+            Nam. Bắt đầu từ một nhà hàng nhỏ, chúng tôi đã phát triển thành một trong nhà hàng Thái uy tín nhất tại
+            TP.Đà Nẵng.
+          </p>
+          <p className='text-justify text-gray-500 text-lg'>
+            Bí quyết tạo nên hương vị Thái Lan đích thực nằm ở sự khéo léo của đầu bếp Việt cùng nguồn nguyên liệu tươi
+            ngon nhập khẩu từ Thái. Tất cả mang đến cho bạn trải nghiệm ẩm thực trọn vẹn, chuẩn không cần chỉnh.
+          </p>
+          <p className='text-justify text-gray-500 text-lg'>
+            Mix Food không chỉ là nơi thưởng thức ẩm thực, mà còn là không gian để bạn trải nghiệm văn hóa và lòng hiếu
+            khách đặc trưng của người Thái.
+          </p>
+        </div>
+        <div className='relative h-96 w-full lg:h-full'>
+          <Image
+            src={URL_RESTAURANT_ABOUT}
+            alt='restaurant'
+            fill
+            priority
+            unoptimized
+            className='rounded-md object-cover'
+          />
         </div>
       </div>
-    </motion.section>
+    </div>
   );
 };
 
