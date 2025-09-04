@@ -1,10 +1,9 @@
-import React from 'react';
 import { useTranslations } from 'next-intl';
-import AboutSection from './components/AboutSection';
-import ConnectSection from './components/ConnectSection';
+import React from 'react';
 import HeroSection from '../../components/HeroSection';
-
-// All text is now translated using next-intl
+import AboutSection from './components/AboutSection';
+import AchievementSection from './components/AchievementSection';
+import ConnectSection from './components/ConnectSection';
 
 const AboutPage = () => {
   const t = useTranslations('AboutPage');
@@ -16,6 +15,7 @@ const AboutPage = () => {
     <div className='min-h-screen bg-gray-50'>
       <HeroSection title={t('title')} subtitle={t('subtitle')} />
       <AboutSection story={story} specialties={specialties} />
+      <AchievementSection />
       <ConnectSection />
     </div>
   );

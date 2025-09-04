@@ -11,9 +11,9 @@ const LandingPage = () => {
   return (
     <div>
       <BannerLandingPage />
+      <BestSeller />
+      <About />
       <div className='container mx-auto'>
-        <BestSeller />
-        <About />
         <Review />
         <PopularFood />
         <LastedUpdate />

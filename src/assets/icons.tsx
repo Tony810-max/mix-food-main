@@ -2,6 +2,8 @@ import type { ForwardRefExoticComponent, RefAttributes, SVGProps } from 'react';
 
 import {
   AtSign,
+  Award,
+  BadgeCheck,
   Calendar,
   ChevronDown,
   ChevronUp,
@@ -9,6 +11,7 @@ import {
   Eye,
   EyeOff,
   Globe,
+  Leaf,
   Lock,
   Mail,
   MailIcon,
@@ -20,6 +23,7 @@ import {
   ThumbsDown,
   ThumbsUp,
   User,
+  UsersRound,
   Utensils,
   X,
 } from 'lucide-react';
@@ -44,6 +48,7 @@ export const IconList = {
   ThumbsUp,
   Utensils,
   User,
+  Leaf,
   EyeOff,
   Phone,
   Calendar,
@@ -58,6 +63,9 @@ export const IconList = {
   Smartphone,
   Clock,
   ReceiptText,
+  Award,
+  UsersRound,
+  BadgeCheck,
 };
 
 type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
