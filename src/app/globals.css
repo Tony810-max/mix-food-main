@@ -8,9 +8,14 @@
   --thai-red: 5 75% 45%;
   --primary-color: hsl(var(--primary));
   --background-gradient: linear-gradient(135deg, hsl(var(--thai-gold)), hsl(var(--thai-red)));
-  /* --background-gradient: black; */
   --heroui-focus: 0 0% 100%;
   --heroui-focus-opacity: 0;
+}
+
+html body[data-scroll-locked] {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  overflow: visible !important;
 }
 
 .bg-primary-100 {
