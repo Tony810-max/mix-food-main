@@ -13,7 +13,9 @@ const ContentMenu = () => {
         heartfelt tribute to the rich culinary heritage of Thailand
       </p>
       <Button className='w-fit rounded-2xl bg-primary py-4 shadow-md hover:opacity-70'>
-        <Link href={URL_MENU}>View Menu</Link>
+        <Link href={URL_MENU} target='_blank'>
+          View Menu
+        </Link>
       </Button>
     </div>
   );
