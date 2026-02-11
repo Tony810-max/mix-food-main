@@ -3,7 +3,7 @@ import type { IFeature } from './types';
 export const getDataFeature = (t: (key: string) => string): IFeature[] => [
   {
     id: 2,
-    img: '/images/landingPage/tomyum.webp',
+    img: '/images/landingPage/Tomyum.webp',
     title: t('nameTomyum'),
     description: t('descFeatureTomyum'),
     category: 'mon chinh',
