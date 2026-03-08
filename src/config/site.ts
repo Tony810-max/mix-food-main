@@ -7,10 +7,5 @@ export const siteConfig = {
   name: 'Mix Food - The best food in the Da Nang area',
   metaTitle: 'Mix Food - The best food in the Da Nang area',
   description: 'Mix Food - The best food in the Da Nang area',
-  ogImage: {
-    url: '/images/landingPage/banner.webp',
-    width: 1200,
-    height: 630,
-    alt: 'Mix Food - The best food in the Da Nang area',
-  },
+  ogImage: '/images/landingPage/banner.webp',
 };
