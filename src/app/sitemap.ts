@@ -4,10 +4,11 @@ import type { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   try {
-    const staticPages: MetadataRoute.Sitemap = Object.values(ROUTES).map((route) => ({
+    const privateRoutes = Object.values(ROUTES).filter((route) => route !== ROUTES.PROFILE);
+    const staticPages: MetadataRoute.Sitemap = privateRoutes.map((route) => ({
       url: `${siteConfig.appUrl}${route}`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: 'weekly',
       priority: 1,
     }));
 
