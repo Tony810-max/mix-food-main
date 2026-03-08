@@ -10,6 +10,9 @@ import './globals.css';
 import Providers from './providers';
 
 export const metadata: Metadata = {
+  verification: {
+    google: 'your-google-verification-code',
+  },
   metadataBase: new URL(siteConfig.appUrl),
   title: siteConfig.name,
   description: siteConfig.description,
