@@ -7,5 +7,10 @@ export const siteConfig = {
   name: 'Mix Food - The best food in the Da Nang area',
   metaTitle: 'Mix Food - The best food in the Da Nang area',
   description: 'Mix Food - The best food in the Da Nang area',
-  ogImage: appConfig.appUrl,
+  ogImage: {
+    url: appConfig.appUrl,
+    width: 1200,
+    height: 630,
+    alt: 'Mix Food - The best food in the Da Nang area',
+  },
 };
