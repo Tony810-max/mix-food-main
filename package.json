@@ -10,7 +10,7 @@
     "lint:fix": "biome lint . --write",
     "format:check": "biome format . ",
     "format:fix": "biome format .  --write",
-    "type-check": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
     "postinstall": "husky"
   },
   "dependencies": {
