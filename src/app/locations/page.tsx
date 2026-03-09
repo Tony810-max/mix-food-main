@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Locations',
-  description: 'Locations Restaurant Thailand Food',
+  description: 'Địa điểm Mix Food',
 };
 
 export default LocationsPage;
