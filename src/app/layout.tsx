@@ -6,9 +6,9 @@ import { cn } from '@/lib/utils';
 import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
-import Script from 'next/script';
 import './globals.css';
 import Providers from './providers';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   verification: {
@@ -67,18 +67,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <html lang={locale}>
-      <head>
-        <Script src='https://www.googletagmanager.com/gtag/js?id=G-JNRMTW86W0' strategy='afterInteractive' />
-
-        <Script id='google-analytics' strategy='beforeInteractive'>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-JNRMTW86W0');
-          `}
-        </Script>
-      </head>
       <body suppressHydrationWarning className={cn('min-h-screen bg-background antialiased', montserrat.className)}>
         <NextIntlClientProvider messages={messages}>
           <Providers>
@@ -87,6 +75,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             <Footer />
           </Providers>
         </NextIntlClientProvider>
+        <GoogleAnalytics gaId='G-XYZ' />
       </body>
     </html>
   );
