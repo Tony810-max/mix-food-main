@@ -70,7 +70,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       <head>
         <Script src='https://www.googletagmanager.com/gtag/js?id=G-JNRMTW86W0' strategy='afterInteractive' />
 
-        <Script id='google-analytics' strategy='afterInteractive'>
+        <Script id='google-analytics' strategy='beforeInteractive'>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
