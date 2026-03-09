@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Book',
-  description: 'Book Restaurant Thailand Food',
+  description: 'Đặt bàn ngay tại Mix Food',
 };
 
 export default BookingPage;

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'About Restaurant Thailand Food',
+  description: 'Giới thiệu Ẩm thực Thái tại Đà Nẵng',
 };
 
 export default AboutPage;

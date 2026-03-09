@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Menu',
-  description: 'Menu Restaurant Thailand Food',
+  description: 'Thực đơn đa dạng Mix Food',
 };
 
 export default MenuPage;

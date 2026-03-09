@@ -4,13 +4,13 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   appUrl: appConfig.appUrl,
-  name: 'Mix Food - The best food in the Da Nang area',
-  metaTitle: 'Mix Food - The best food in the Da Nang area',
-  description: 'Mix Food - The best food in the Da Nang area',
+  name: 'Mix Food - Nhà Hàng Tốt Nhất Tại Đà Nẵng',
+  metaTitle: 'Mix Food - Nhà Hàng Tốt Nhất Tại Đà Nẵng',
+  description: 'Mix Food - Nhà Hàng Tốt Nhất Tại Đà Nẵng',
   ogImage: {
     url: appConfig.appUrl,
     width: 1200,
     height: 630,
-    alt: 'Mix Food - The best food in the Da Nang area',
+    alt: 'Mix Food - Nhà Hàng Tốt Nhất Tại Đà Nẵng',
   },
 };
