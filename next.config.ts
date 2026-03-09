@@ -29,17 +29,7 @@ const webpack = (config: any) => {
 const nextConfig: NextConfig = {
   reactStrictMode: false,
   output: 'standalone',
-  experimental: {
-    turbo: {
-      // For development
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
-  },
+  experimental: {},
   webpack: process.env.NODE_ENV === 'development' ? undefined : webpack,
 };
 
