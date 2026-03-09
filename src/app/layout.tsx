@@ -75,7 +75,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             <Footer />
           </Providers>
         </NextIntlClientProvider>
-        <GoogleAnalytics gaId='G-XYZ' />
+        <GoogleAnalytics gaId='G-JNRMTW8GW0' />
       </body>
     </html>
   );
