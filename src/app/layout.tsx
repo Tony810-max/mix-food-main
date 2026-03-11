@@ -11,16 +11,13 @@ import './globals.css';
 import Providers from './providers';
 
 export const metadata: Metadata = {
-  verification: {
-    google: 'your-google-verification-code',
-  },
   metadataBase: new URL(siteConfig.appUrl),
   title: siteConfig.name,
   description: siteConfig.description,
   generator: 'Next.js',
   applicationName: siteConfig.name,
   referrer: 'origin-when-cross-origin',
-  keywords: [],
+  keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
