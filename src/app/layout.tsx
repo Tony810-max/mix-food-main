@@ -3,6 +3,7 @@ import Footer from '@/components/layouts/Footer';
 import Header from '@/components/layouts/Header';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   generator: 'Next.js',
   applicationName: siteConfig.name,
   referrer: 'origin-when-cross-origin',
-  keywords: [],
+  keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
@@ -61,9 +62,26 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   const locale = await getLocale();
   const messages = await getMessages();
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Restaurant',
+    name: 'Mix Food',
+    image: 'https://mix-food.io.vn/logo.png',
+    '@id': 'https://mix-food.io.vn',
+    url: 'https://mix-food.io.vn',
+    telephone: '+84905473728',
+    servesCuisine: 'Thai',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Da Nang',
+      addressCountry: 'VN',
+    },
+  };
+
   return (
     <html lang={locale}>
       <body suppressHydrationWarning className={cn('min-h-screen bg-background antialiased', montserrat.className)}>
+        <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <Header />
@@ -71,6 +89,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             <Footer />
           </Providers>
         </NextIntlClientProvider>
+        <GoogleAnalytics gaId='G-JNRMTW8GW0' />
       </body>
     </html>
   );

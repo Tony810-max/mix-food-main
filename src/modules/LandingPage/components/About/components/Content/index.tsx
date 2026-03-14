@@ -7,9 +7,7 @@ import DotText from './DotText';
 const Content = () => {
   return (
     <div className='space-y-6'>
-      <span className='font-bold text-3xl leading-tight sm:text-5xl'>
-        Hành trình mang hương vị Thái Lan đến Việt Nam
-      </span>
+      <p className='font-bold text-3xl capitalize sm:text-5xl'>Hành trình mang hương vị Thái Lan đến Việt Nam</p>
       <p className='max-w-[31.25rem] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
         Được thành lập bởi đầu bếp Somchai từ Bangkok, Thai Delicious cam kết mang đến những món ăn Thái Lan chính gốc
         với nguyên liệu tươi ngon và công thức truyền thống.

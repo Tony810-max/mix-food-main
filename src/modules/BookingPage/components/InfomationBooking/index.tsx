@@ -5,7 +5,7 @@ import PolicyCard from './PolicyCard';
 
 const InfomationBooking = () => {
   return (
-    <div className='flex flex-col justify-between'>
+    <div className='flex flex-col justify-between gap-4'>
       <OpeningCard />
       <PolicyCard />
       <ContactCard />
