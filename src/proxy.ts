@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import { COOKIE_KEYS } from './lib/cookie';
 import { privateRoutes, publicRoutes } from './utils/const';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const token = request.cookies.get(COOKIE_KEYS.ACCESS_TOKEN);
   const { pathname } = new URL(request.url);
 
