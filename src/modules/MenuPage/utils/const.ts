@@ -7,6 +7,9 @@ export const DATA_MENU = [
     category: 'Goi Tom',
     time: '10-15 min',
     price: '12000',
+    isBestSeller: true,
+    isSpicy: false,
+    isVegetarian: false,
   },
   {
     img: '/images/menuPage/goitomthailan.webp',
@@ -14,6 +17,9 @@ export const DATA_MENU = [
     category: 'Goi Tom',
     time: '10-15 min',
     price: '$12.99',
+    isBestSeller: false,
+    isSpicy: false,
+    isVegetarian: false,
   },
   {
     img: '/images/menuPage/goitomthailan.webp',
@@ -21,6 +27,9 @@ export const DATA_MENU = [
     category: 'Goi Tom',
     time: '10-15 min',
     price: '$12.99',
+    isBestSeller: false,
+    isSpicy: false,
+    isVegetarian: false,
   },
   {
     img: '/images/menuPage/goitomthailan.webp',
@@ -28,6 +37,9 @@ export const DATA_MENU = [
     category: 'Goi Tom',
     time: '10-15 min',
     price: '$12.99',
+    isBestSeller: false,
+    isSpicy: false,
+    isVegetarian: false,
   },
   {
     img: '/images/menuPage/goitomthailan.webp',
@@ -35,6 +47,9 @@ export const DATA_MENU = [
     category: 'Goi Tom',
     time: '10-15 min',
     price: '$12.99',
+    isBestSeller: false,
+    isSpicy: false,
+    isVegetarian: false,
   },
   {
     img: '/images/menuPage/goitomthailan.webp',
@@ -42,5 +57,8 @@ export const DATA_MENU = [
     category: 'Goi Tom',
     time: '10-15 min',
     price: '$12.99',
+    isBestSeller: false,
+    isSpicy: false,
+    isVegetarian: false,
   },
 ];

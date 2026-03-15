@@ -35,7 +35,7 @@ const CardFood: FC<ICardFoodProps> = ({
       fade
       inView
       delay={(index || 0.1) * 0.5}
-      className='space-y-2 overflow-hidden rounded-lg shadow-lg'
+      className='space-y-2 rounded-lg shadow-lg'
     >
       <div className='relative aspect-[3/2]'>
         <div className='absolute top-2 right-2 z-10 flex items-center gap-4'>
@@ -46,7 +46,7 @@ const CardFood: FC<ICardFoodProps> = ({
             </Badge>
           )}
           {isSpicy && (
-            <Badge variant={'secondary'} className='space-x-1 space-x-2 bg-primary hover:bg-primary'>
+            <Badge variant={'secondary'} className='space-x-2 bg-primary hover:bg-primary'>
               🌶️ Cay
             </Badge>
           )}
@@ -57,23 +57,19 @@ const CardFood: FC<ICardFoodProps> = ({
             </Badge>
           )}
         </div>
-        <Image
-          src={img}
-          alt='food'
-          fill
-          unoptimized
-          priority
-          className=' transition-transform duration-200 hover:scale-x-110'
-        />
+        <Image src={img} alt='food' fill unoptimized priority className='rounded-lg border-3 border-primary' />
       </div>
       <div className='flex flex-col gap-2 p-4'>
-        <span className='gray-900 font-bold text-2xl '>{title}</span>
+        <span className='gray-900 font-bold text-2xl'>{title}</span>
         {description && <span className='line-clamp-1 text-gray-600 text-sm'>{description}</span>}
         <div className='flex items-center justify-between'>
           <span className='font-bold text-primary text-xl'>
-            {Number(price).toLocaleString('vi', { style: 'currency', currency: 'VND' })}
+            {Number(price).toLocaleString('vi', {
+              style: 'currency',
+              currency: 'VND',
+            })}
           </span>
-          <Button>Đặt món</Button>
+          <Button disabled>Đặt món (Sắp có)</Button>
         </div>
       </div>
     </MotionEffect>
