@@ -6,7 +6,7 @@ export const DATA_MENU = [
     title: 'Goi Tom Thai Lan',
     category: 'Goi Tom',
     time: '10-15 min',
-    price: '$12.99',
+    price: '12000',
   },
   {
     img: '/images/menuPage/goitomthailan.webp',
