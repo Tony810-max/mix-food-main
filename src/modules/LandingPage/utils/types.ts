@@ -1,10 +1,10 @@
-export interface IFeature {
+import type { ICardFoodProps } from '@/components/CardFood';
+
+export interface IFeature extends ICardFoodProps {
   id: number;
   img: string;
   title: string;
-  description: string;
-  category: string;
-  price: string | number;
+  price: number | string;
 }
 
 export interface IReview {

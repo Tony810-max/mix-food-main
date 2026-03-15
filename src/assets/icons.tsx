@@ -12,6 +12,7 @@ import {
   EyeOff,
   Globe,
   Leaf,
+  LeafyGreen,
   Lock,
   Mail,
   MailIcon,
@@ -20,6 +21,7 @@ import {
   ReceiptText,
   ShieldCheck,
   Smartphone,
+  Star,
   ThumbsDown,
   ThumbsUp,
   User,
@@ -66,6 +68,8 @@ export const IconList = {
   Award,
   UsersRound,
   BadgeCheck,
+  Star,
+  LeafyGreen,
 };
 
 type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
