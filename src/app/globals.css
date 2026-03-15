@@ -12,6 +12,10 @@
   --heroui-focus-opacity: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html body[data-scroll-locked] {
   margin-right: 0px !important;
   margin-left: 0px !important;
